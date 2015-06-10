@@ -1,0 +1,9 @@
+UTC20150610 
+Functional set! - if the underlying memory model of
+program's runtime is monotonic (i.e. via reversible hardware), set!
+should translate to rebinding, not replacing, a name with a value,
+essentially creating a new "top level" or "most recent" name-value
+pair. First class environments, the hoon context, monadic I/O, etc.,
+simulate this behavior in software, but would either be unncessary or
+suffer less translation debt if implemented on exposed monotonic
+memory.
