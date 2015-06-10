@@ -7,3 +7,8 @@ pair. First class environments, the hoon context, monadic I/O, etc.,
 simulate this behavior in software, but would either be unncessary or
 suffer less translation debt if implemented on exposed monotonic
 memory.
+
+Stack, heap - bah! Single global store. If one must be Von
+Neumann-esque, follow the master exactly. Even if one is not, a pool
+or a stream or some other aquatic analogy grants more insight into
+this hydraulic dependency than a partially segregated array.
