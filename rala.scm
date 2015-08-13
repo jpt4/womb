@@ -30,7 +30,7 @@
 								(case role
 									['stem (set-default-state)]
                   ['nand
-									 (set! lo (lognand ((cell 'ni?)) ((cell 'ei?))))]
+									 (set! lo (lognand ((cell ni ei))]
 									))]
 				))))
 
