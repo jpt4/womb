@@ -1,0 +1,14 @@
+● netctl@wlp3s0\x2dbloominglabs.service - Networking for netctl profile wlp3s0-bloominglabs
+   Loaded: loaded (/usr/lib/systemd/system/netctl@.service; static; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Thu 2015-08-20 06:33:17 UTC; 2min 28s ago
+     Docs: man:netctl.profile(5)
+  Process: 2228 ExecStart=/usr/lib/network/network start %I (code=exited, status=1/FAILURE)
+ Main PID: 2228 (code=exited, status=1/FAILURE)
+
+Aug 20 06:33:17 ark systemd[1]: Starting Networking for netctl profile wlp3s0-bloominglabs...
+Aug 20 06:33:17 ark network[2228]: Starting network profile 'wlp3s0-bloominglabs'...
+Aug 20 06:33:17 ark network[2228]: The interface of network profile 'wlp3s0-bloominglabs' is already up
+Aug 20 06:33:17 ark systemd[1]: netctl@wlp3s0\x2dbloominglabs.service: Main process exited, code=exited, status=1/FAILURE
+Aug 20 06:33:17 ark systemd[1]: Failed to start Networking for netctl profile wlp3s0-bloominglabs.
+Aug 20 06:33:17 ark systemd[1]: netctl@wlp3s0\x2dbloominglabs.service: Unit entered failed state.
+Aug 20 06:33:17 ark systemd[1]: netctl@wlp3s0\x2dbloominglabs.service: Failed with result 'exit-code'.
