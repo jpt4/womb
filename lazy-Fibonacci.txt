@@ -1,0 +1,125 @@
+From oleg@pobox.com Wed Dec 23 15:01:28 1998
+From: oleg@pobox.com
+Subject: Lazy Fibonacci Scheme
+Date: Wed, 23 Dec 1998 23:02:36 GMT
+Reply-To: oleg@pobox.com
+Keywords: lazy evaluation, delay, stream, Haskell, Scheme
+Newsgroups: comp.lang.scheme,comp.lang.functional
+Organization: Deja News - The Leader in Internet Discussion
+References: <Pine.SUN.3.95-heb-2.07.981218223224.13671B-100000@sunset.ma.huji.ac.il> <75mhnf$un4$1@newsfeeds.rpi.edu>
+Summary: Fibonacci sequence as a lazy Scheme "stream"
+X-Article-Creation-Date: Wed Dec 23 23:02:36 1998 GMT
+X-Http-User-Agent: Mozilla/4.08 (Macintosh; I; PPC, Nav)
+Content-Length: 3502
+Status: RO
+
+Although (potentially infinite) streams are not built in into Scheme,
+they are rather easily emulated, as this article tries to show. It
+presents a "stream"-lined Fibonacci sequence re-written from a
+previously published Haskell code, which was beautiful indeed. The
+difference between these two particular snippets is in the number of
+parentheses.
+
+Let me first give a less generic but more optimal solution:
+
+        ; which is actually a 'map' over two lazy lists ("streams")
+(define (pointwise f L1 L2)
+    (let ((L1 (force L1)) (L2 (force L2)))
+     (cond
+     ((null? L1) '())
+     ((null? L2) '())
+     (else (cons (f (car L1) (car L2))
+                 (delay (pointwise f (cdr L1) (cdr L2))))))))
+
+(define fibs (cons 1 (cons 1 (delay (pointwise + fibs (cdr fibs))))))
+
+        ; Give the n-th element of a lazy list
+(define (n-th L n)
+    (let ((L (force L)))
+      (if (positive? n) (n-th (cdr L) (- n 1))
+        (car L))))
+
+(n-th fibs 0) => 1
+(n-th fibs 1) => 1
+(n-th fibs 2) => 2
+(n-th fibs 3) => 3
+(n-th fibs 4) => 5
+
+(do ((i 0 (+ 1 i))) ((> i 10) (newline))
+  (display (n-th fibs i)) (display #\space))
+1 1 2 3 5 8 13 21 34 55 89
+
+(time (n-th fibs 300))
+    31 ms real time
+    20 ms cpu time (20 user, 0 system)
+    no collections
+    100744 bytes allocated
+    no minor faults
+    no major faults
+359579325206583560961765665172189099052367214309267232255589801
+(time (n-th fibs 300))
+    13 ms real time
+    10 ms cpu time (10 user, 0 system)
+    no collections
+    26488 bytes allocated
+    no minor faults
+    no major faults
+359579325206583560961765665172189099052367214309267232255589801
+
+The second time around was sure faster. Laziness does pay off!
+Let me spice it up, with macros:
+
+                ; Lazy cons
+(define-macro (l-cons x y) `(cons ,x (delay ,y)))
+
+                ; Eager null? car and cdr
+                ; Note, Gambit's null? car and cdr force their arguments
+                ; by default. The following macros can be regular
+                ; functions as well.
+
+(define-macro (e-null? x) `(null? (force ,x)))
+(define-macro (e-car x) `(car (force ,x)))
+(define-macro (e-cdr x) `(cdr (force ,x)))
+
+I'll write lazy Scheme code right beneath the Haskell code from the
+original article by Art Duncan,
+http://x7.dejanews.com/getdoc.xp?AN=424665065
+
+>Assume we already have a lazy function called 'pointwise' defined by
+>
+>        pointwise f  []     _     = []
+>        pointwise f  _      []    = []
+>        pointwise f (x:xs) (y:ys) = f x y : pointwise f xs ys
+
+(define (pointwise f L1 L2)
+     (cond
+     ((e-null? L1) '())
+     ((e-null? L2) '())
+     (else (l-cons (f (e-car L1) (e-car L2))
+                   (pointwise f (e-cdr L1) (e-cdr L2))))))
+
+>We can then define the fibonacci numbers as
+>       fibs = 1 : 1 : pointwise (+) fibs (tail fibs)
+
+(define fibs (l-cons 1 (l-cons 1 (pointwise + fibs (e-cdr fibs)))))
+
+I think a regular cdr would've sufficed too.
+
+(define (n-th L n)
+    (if (positive? n) (n-th (e-cdr L) (- n 1)) (e-car L)))
+
+(do ((i 0 (+ 1 i))) ((> i 10) (newline))
+  (display (n-th fibs i)) (display #\space))
+1 1 2 3 5 8 13 21 34 55 89
+
+
+The following short article gives another example: a lazy list
+flattener.
+        http://pobox.com/~oleg/ftp/Scheme/misc.html#lazy-flattener
+This flattener is not only properly tail recursive, it's
+tail-infective as well: it works like a virus. The flattener can
+handle even circular "lists" - a really infinite data structure. I
+don't quite comprehend how the code does this, yet it somehow works.
+
+
+
