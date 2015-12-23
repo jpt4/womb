@@ -35,16 +35,40 @@ L = { f(x) | x = [0, 100] }
 	(let tail ([t 0])
 		(l-cons t (tail (+ 1 t)))))
 
+(define last-arg 
+	(lambda (f s . t)
+		(if (null? t)
+				(list f s)
+				(list t))))		
+
 ;first n elements of a lazy list
 (define (first-n ls n)
-	(define (first-n-aux ls n acc)
+	(cond
+	 [(zero? n) '()]
+	 [else (cons (f-car ls) (first-n (f-cdr ls) (- n 1)))]))
+
+(define (first-n-acc stream num)
+	(let aux ([st stream] [n num] [acc '()])
+						(cond
+						 [(zero? n) (reverse acc)]
+						 [else (aux (f-cdr st) (- n 1) (cons (f-car st) acc))])))
+
+
+(define (first-n-acc2 stream num)
+	(if (zero? num) '()
+			(let aux ([st (f-cdr stream)] [n num] [acc (list (f-car stream))])
+				(cond
+				 [(eq? n 1) acc]
+				 [else (aux (f-cdr st) (- n 1) (append acc (list (f-car st))))]))))
+#|
+(define (first-n-aux ls n acc)
 	  (cond
 		 [(not (positive? n)) (cons (gl-n-th ls 0) acc)]
 		 [else (first-n-aux ls (- n 1) (cons (gl-n-th ls n) acc))]
 		 ))
 	(first-n-aux ls (- n 1) '()))
 
-#|
+
 ;lazy iota
 (define iota-stream
   (cons 1 (delay (pointwise + 
