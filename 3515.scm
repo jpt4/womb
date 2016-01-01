@@ -1,5 +1,5 @@
 ;3515.scm
-;cracklepop task
+;cracklepop task sandbox
 ;jpt4
 ;UTC20151207
 
@@ -24,22 +24,42 @@ L = { f(x) | x = [0, 100] }
 
 (define (f-cdr st)
 	(force (cdr st)))
-
+		
 ;stream of 1s
 (define ones (delay (cons 1 ones)))
 
 (define l-ones (l-cons 1 l-ones))
 
-;natural numbers TOFIX
+;natural numbers stream
 (define nats 
 	(let tail ([t 0])
 		(l-cons t (tail (+ 1 t)))))
 
-(define last-arg 
-	(lambda (f s . t)
-		(if (null? t)
-				(list f s)
-				(list t))))		
+;cracklePop stream
+(define cp
+	(let next ([n nats])
+		(cond
+		 [(eq? (modulo (f-car n) 15) 0) (l-cons "CracklePop" (next (f-cdr n)))]
+		 [(eq? (modulo (f-car n) 3) 0) (l-cons "Crackle" (next (f-cdr n)))]
+		 [(eq? (modulo (f-car n) 5) 0) (l-cons "Pop" (next (f-cdr n)))]
+		 [else (l-cons (f-car n) (next (f-cdr n)))])))
+
+;lazy map over a stream
+(define (l-map op st)
+	(let next ([s st])
+		(l-cons (op (f-car s)) (next (f-cdr s)))))
+
+;CracklePop predicate
+(define (cp? num)
+	(cond
+	 [(eq? (modulo num 15) 0) "CracklePop"]
+	 [(eq? (modulo num 3) 0) "Crackle"]
+	 [(eq? (modulo num 5) 0) "Pop"]
+	 [else num]))
+
+;full task
+(define CracklePop
+	(cdr (first-n (l-map cp? nats) 101)))
 
 ;first n elements of a lazy list
 (define (first-n ls n)
@@ -53,13 +73,18 @@ L = { f(x) | x = [0, 100] }
 						 [(zero? n) (reverse acc)]
 						 [else (aux (f-cdr st) (- n 1) (cons (f-car st) acc))])))
 
-
 (define (first-n-acc2 stream num)
 	(if (zero? num) '()
 			(let aux ([st (f-cdr stream)] [n num] [acc (list (f-car stream))])
 				(cond
 				 [(eq? n 1) acc]
 				 [else (aux (f-cdr st) (- n 1) (append acc (list (f-car st))))]))))
+
+(define last-arg 
+	(lambda (f s p . t)
+		(if (null? t)
+				(list f s)
+				(list t))))	
 #|
 (define (first-n-aux ls n acc)
 	  (cond
@@ -68,6 +93,11 @@ L = { f(x) | x = [0, 100] }
 		 ))
 	(first-n-aux ls (- n 1) '()))
 
+(define one-list 
+	(lambda (n)
+		(if (zero? n)
+				'()
+				(cons 1 (one-list (- n 1))))))
 
 ;lazy iota
 (define iota-stream
@@ -77,5 +107,3 @@ L = { f(x) | x = [0, 100] }
 ;manual experiments
 ;(cons (car (force (cdr (force (cdr (force ones)))))) (cons (car (force (cdr (force ones)))) (cons (car (force ones)) '())))
 ;$37 = (1 1 1)
-
-
