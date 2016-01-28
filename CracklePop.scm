@@ -44,9 +44,9 @@ L = { f(x) | x = [0, 100] }
 ;CracklePop predicate
 (define (cp? num)
 	(cond
-	 [(eq? (modulo num 15) 0) "CracklePop"]
-	 [(eq? (modulo num 3) 0) "Crackle"]
-	 [(eq? (modulo num 5) 0) "Pop"]
+	 [(eq? (modulo num 15) 0) (string->symbol "CracklePop")]
+	 [(eq? (modulo num 3) 0) (string->symbol "Crackle")]
+	 [(eq? (modulo num 5) 0) (string->symbol "Pop")]
 	 [else num]))
 
 ;CracklePop stream for [1, 100]

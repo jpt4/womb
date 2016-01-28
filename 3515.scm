@@ -57,15 +57,16 @@ L = { f(x) | x = [0, 100] }
 	 [(eq? (modulo num 5) 0) "Pop"]
 	 [else num]))
 
-;full task
-(define CracklePop
-	(cdr (first-n (l-map cp? nats) 101)))
-
 ;first n elements of a lazy list
 (define (first-n ls n)
 	(cond
 	 [(zero? n) '()]
 	 [else (cons (f-car ls) (first-n (f-cdr ls) (- n 1)))]))
+
+;full task
+(define CracklePop
+	(cdr (first-n (l-map cp? nats) 101)))
+
 
 (define (first-n-acc stream num)
 	(let aux ([st stream] [n num] [acc '()])
@@ -85,6 +86,13 @@ L = { f(x) | x = [0, 100] }
 		(if (null? t)
 				(list f s)
 				(list t))))	
+
+(define (opt-arg a . b)
+	(cond
+	 [(null? b) a]
+	 [(zero? (car b)) 'zero] ;car to access element of residual list b
+	 [else b]))
+	
 #|
 (define (first-n-aux ls n acc)
 	  (cond
