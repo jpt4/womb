@@ -16,7 +16,7 @@ f(x) = {
 L = { f(x) | x = [0, 100] }
 |#
 
-;l-cons must be defined as syntax else guile refuses to expand early enough
+;l-cons must be defined as syntax else guile evaluates its arguments eagerly.
 (define-syntax l-cons
 	(syntax-rules ()
 		((l-cons x y) (cons (delay x) (delay y)))))
