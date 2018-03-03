@@ -2,6 +2,6 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Tutorial -main."
   [& args]
-  (println "Hello, World!"))
+  (println "Greetings, Metaverse. Args in are:" args))
