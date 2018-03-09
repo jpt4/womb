@@ -1,0 +1,759 @@
+<!-- X-URL: https://www.italianfuturism.org/manifestos/foundingmanifesto/ -->
+<!-- Date: Tue, 06 Mar 2018 12:45:10 GMT -->
+<BASE HREF="https://www.italianfuturism.org/manifestos/foundingmanifesto/">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.italianfuturism.org/xmlrpc.php" />
+
+<title>The Founding and Manifesto of Futurism  &#8211; Italian Futurism</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Italian Futurism &raquo; Feed" href="https://www.italianfuturism.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Italian Futurism &raquo; Comments Feed" href="https://www.italianfuturism.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Italian Futurism &raquo; The Founding and Manifesto of Futurism Comments Feed" href="https://www.italianfuturism.org/manifestos/foundingmanifesto/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.italianfuturism.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wisteria-bootstrap-grid-css'  href='https://www.italianfuturism.org/wp-content/themes/wisteria/css/bootstrap-grid.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.italianfuturism.org/wp-content/themes/wisteria/css/font-awesome.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wisteria-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7CLato%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wisteria-style-css'  href='https://www.italianfuturism.org/wp-content/themes/wisteria/style.css?ver=4.9.3' type='text/css' media='all' />
+<style id='wisteria-style-inline-css' type='text/css'>
+.wisteria-designer{ clip:rect(1px, 1px, 1px, 1px); position:absolute; }
+</style>
+<!-- Inline jetpack_facebook_likebox -->
+<style id='jetpack_facebook_likebox-inline-css' type='text/css'>
+.widget_facebook_likebox {
+	overflow: hidden;
+}
+
+</style>
+<link rel='stylesheet' id='jetpack_css-css'  href='https://www.italianfuturism.org/wp-content/plugins/jetpack/css/jetpack.css?ver=5.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.italianfuturism.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.italianfuturism.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.italianfuturism.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.3" />
+<link rel="canonical" href="https://www.italianfuturism.org/manifestos/foundingmanifesto/" />
+<link rel='shortlink' href='https://wp.me/P4hsmp-27' />
+<link rel="alternate" type="application/json+oembed" href="https://www.italianfuturism.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.italianfuturism.org%2Fmanifestos%2Ffoundingmanifesto%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.italianfuturism.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.italianfuturism.org%2Fmanifestos%2Ffoundingmanifesto%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//widgets.wp.com'/>
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//0.gravatar.com'/>
+<link rel='dns-prefetch' href='//1.gravatar.com'/>
+<link rel='dns-prefetch' href='//2.gravatar.com'/>
+
+	
+		<style type="text/css">
+			.site-title a,
+		.site-title a:visited {
+			color: #000000;
+		}
+		.site-title a:hover,
+		.site-title a:focus,
+		.site-title a:active {
+			opacity: 0.7;
+		}
+		.site-description {
+			color: #000000;
+			opacity: 0.7;
+		}
+		</style>
+
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Founding and Manifesto of Futurism" />
+<meta property="og:url" content="https://www.italianfuturism.org/manifestos/foundingmanifesto/" />
+<meta property="og:description" content="Translated from French: Le Figaro, Paris, February 20, 1909 (Italian version here) This English-language translation COPYRIGHT ©1973 Thames and Hudson Ltd, London. All rights reserved. Source for t…" />
+<meta property="article:published_time" content="2008-08-22T16:20:48+00:00" />
+<meta property="article:modified_time" content="2014-03-03T22:40:40+00:00" />
+<meta property="og:site_name" content="Italian Futurism" />
+<meta property="og:image" content="https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo.jpg" />
+<meta property="og:image:width" content="422" />
+<meta property="og:image:height" content="599" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="The Founding and Manifesto of Futurism" />
+<meta name="twitter:image" content="https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo.jpg?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="https://www.italianfuturism.org/wp-content/uploads/2017/03/cropped-icon-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.italianfuturism.org/wp-content/uploads/2017/03/cropped-icon-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.italianfuturism.org/wp-content/uploads/2017/03/cropped-icon-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.italianfuturism.org/wp-content/uploads/2017/03/cropped-icon-270x270.jpg" />
+<!-- BEGIN GADWP v5.1.2.5 Universal Analytics - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-5437702-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END GADWP Universal Analytics -->
+</head>
+<body class="page-template-default page page-id-131 page-child parent-pageid-349 custom-background group-blog has-site-branding has-right-sidebar">
+<div id="page" class="site-wrapper site">
+
+	<header id="masthead" class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xxl-12">
+
+					<div class="site-header-inside">
+
+						<div class="site-branding-wrapper">
+							<div class="site-logo-wrapper"></div>
+							<div class="site-branding">
+								<h2 class="site-title"><a href="https://www.italianfuturism.org/" title="Italian Futurism" rel="home">Italian Futurism</a></h2>
+																<h3 class="site-description">Events, Exhibitions, Scholarship</h3>
+															</div>
+						</div><!-- .site-branding-wrapper -->
+
+						<div class="toggle-menu-wrapper">
+							<a href="#main-navigation-responsive" title="Menu" class="toggle-menu-control">
+								<span class="screen-reader-text">Menu</span>
+							</a>
+						</div>
+
+					</div><!-- .site-header-inside -->
+
+				</div><!-- .col-xxl-12 -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</header><!-- #masthead -->
+
+	<nav id="site-navigation" class="main-navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xxl-12">
+
+					<div class="main-navigation-inside">
+
+						<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+						<div class="site-primary-menu"><ul id="menu-navigation" class="primary-menu sf-menu"><li id="menu-item-8789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8789"><a href="https://www.italianfuturism.org/contact-2/">Contact</a></li>
+<li id="menu-item-8804" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-8804"><a href="https://www.italianfuturism.org/manifestos/">Manifestos</a></li>
+<li id="menu-item-8794" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8794"><a href="https://www.italianfuturism.org/category/events/">Events</a></li>
+<li id="menu-item-8792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8792"><a href="https://www.italianfuturism.org/category/exhibitions/">Exhibitions</a>
+<ul class="sub-menu">
+	<li id="menu-item-8828" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8828"><a href="https://www.italianfuturism.org/category/exhibitions/">Exhibitions</a></li>
+	<li id="menu-item-8820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8820"><a href="https://www.italianfuturism.org/exhibitions/">List of Exhibitions</a></li>
+</ul>
+</li>
+<li id="menu-item-8795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8795"><a href="https://www.italianfuturism.org/category/scholarship/">Scholarship</a>
+<ul class="sub-menu">
+	<li id="menu-item-8829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8829"><a href="https://www.italianfuturism.org/category/scholarship/">Scholarship</a></li>
+	<li id="menu-item-8923" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8923"><a href="https://www.italianfuturism.org/category/scholarship/opportunities/">Opportunities</a></li>
+	<li id="menu-item-8860" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8860"><a href="https://www.italianfuturism.org/category/scholarship/reviews/">Reviews</a></li>
+	<li id="menu-item-8824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8824"><a href="https://www.italianfuturism.org/category/publications/">Publications</a></li>
+	<li id="menu-item-8823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8823"><a href="https://www.italianfuturism.org/category/fun/">Just for Fun</a></li>
+</ul>
+</li>
+<li id="menu-item-8834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8834"><a href="https://www.italianfuturism.org/donate/">Donate</a></li>
+</ul></div>
+					</div><!-- .main-navigation-inside -->
+
+				</div><!-- .col-xxl-12 -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</nav><!-- .main-navigation -->
+
+	<div id="content" class="site-content">
+
+	<div class="container">
+		<div class="row">
+
+			<div id="primary" class="content-area col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+				<main id="main" class="site-main">
+
+					
+						
+<article id="post-131" class="post-131 page type-page status-publish has-post-thumbnail hentry">
+	<div class="entry-header-wrapper">
+		<header class="entry-header">
+			<h1 class="entry-title entry-title-single">The Founding and Manifesto of Futurism</h1>		</header><!-- .entry-header -->
+	</div><!-- .entry-header-wrapper -->
+
+	<div class="entry-content">
+		<p><a href="https://www.italianfuturism.org/manifestos/fondation-et-manifeste-du-futurisme/" target="_blank">Translated from French</a>: <em>Le Figaro</em>, Paris, February 20, 1909 (Italian version <a href="https://www.italianfuturism.org/manifestos/fondazione-e-manifesto-del-futurismo/" target="_blank">here</a>)</p>
+<p><span style="color: #ff0000;">This English-language translation COPYRIGHT ©1973 Thames and Hudson Ltd, London. All rights reserved.</span></p>
+<p>Source for translation by R.W. Flint reproduced below:</p>
+<p>Apollonio, Umbro, ed. <em>Documents of 20th Century Art: Futurist Manifestos</em>. Brain, Robert, R.W. Flint, J.C. Higgitt, and Caroline Tisdall, trans. New York: Viking Press, 1973. 19-24.</p>
+<h1><strong>The Founding and Manifesto of Futurism </strong>by F. T. Marinetti</h1>
+<p>We had stayed up all night, my friends and I, under hanging mosque lamps with domes of filigreed brass, domes starred like our spirits, shining like them with the prisoned radiance of electric hearts. For hours we had trampled our atavistic ennui into rich oriental rugs, arguing up to the last confines of logic and blackening many reams of paper with our frenzied scribbling.</p>
+<p>An immense pride was buoying us up, because we felt ourselves alone at that hour, alone, awake, and on our feet, like proud beacons or forward sentries against an army of hostile stars glaring down at us from their celestial encampments. Alone with stokers feeding the hellish fires of great ships, alone with the black spectres who grope in the red-hot bellies of locomotives launched on their crazy courses, alone with drunkards reeling like wounded birds along the city walls.</p>
+<p>Suddenly we jumped, hearing the mighty noise of the huge double-decker trams that rumbled by outside, ablaze with colored lights, like villages on holiday suddenly struck and uprooted by the flooding Po and dragged over falls and through gourges to the sea.</p>
+<p>Then the silence deepened. But, as we listened to the old canal muttering its feeble prayers and the creaking bones of sickly palaces above their damp green beards, under the windows we suddenly heard the famished roar of automobiles.</p>
+<p>‘Let’s go!’ I said. ‘Friends, away! Let’s go! Mythology and the Mystic Ideal are defeated at last. We’re about to see the Centaur’s birth and, soon after, the first flight of Angels!&#8230; We must shake at the gates of life, test the bolts and hinges. Let’s go! Look there, on the earth, the very first dawn! There’s nothing to match the splendor of the sun’s red sword, slashing for the first time through our millennial gloom!’</p>
+<p>We went up to the three snorting beasts, to lay amorous hands on their torrid breasts. I stretched out on my car like a corpse on its bier, but revived at once under the steering wheel, a guillotine blade that threatened my stomach.</p>
+<p>The raging broom of madness swept us out of ourselves and drove us through streets as rough and deep as the beds of torrents. Here and there, sick lamplight through window glass taught us to distrust the deceitful mathematics of our perishing eyes.</p>
+<p>I cried, ‘The scent, the scent alone is enough for our beasts.’</p>
+<p>And like young lions we ran after Death, its dark pelt blotched with pale crosses as it escaped down the vast violet living and throbbing sky.</p>
+<p>But we had no ideal Mistress raising her divine form to the clouds, nor any cruel Queen to whom to offer our bodies, twisted like Byzantine rings! There was nothing to make us wish for death, unless the wish to be free at last from the weight of our courage!</p>
+<p>And on we raced, hurling watchdogs against doorsteps, curling them under our burning tires like collars under a flatiron. Death, domesticated, met me at every turn, gracefully holding out a paw, or once in a while hunkering down, making velvety caressing eyes at me from every puddle.</p>
+<p>‘Let’s break out of the horrible shell of wisdom and throw ourselves like pride-ripened fruit into the wide, contorted mouth of the wind! Let’s give ourselves utterly to the Unknown, not in desperation but only to replenish the deep wells of the Absurd!’</p>
+<p>The words were scarcely out of my mouth when I spun my car around with the frenzy of a dog trying to bite its tail, and there, suddenly, were two cyclists coming towards me, shaking their fists, wobbling like two equally convincing but nevertheless contradictory arguments. Their stupid dilemma was blocking my way—Damn! Ouch!&#8230; I stopped short and to my disgust rolled over into a ditch with my wheels in the air&#8230;</p>
+<p>O maternal ditch, almost full of muddy water! Fair factory drain! I gulped down your nourishing sludge; and I remembered the blessed black breast of my Sudanese nurse&#8230; When I came up—torn, filthy, and stinking—from under the capsized car, I felt the white-hot iron of joy deliciously pass through my heart!</p>
+<p>A crowd of fishermen with handlines and gouty naturalists were already swarming around the prodigy. With patient, loving care those people rigged a tall derrick and iron grapnels to fish out my car, like a big beached shark. Up it came from the ditch, slowly, leaving in the bottom, like scales, its heavy framework of good sense and its soft upholstery of comfort.</p>
+<p>They thought it was dead, my beautiful shark, but a caress from me was enough to revive it; and there it was, alive again, running on its powerful fins!</p>
+<p>And so, faces smeared with good factory muck—plastered with metallic waste, with senseless sweat, with celestial soot—we, bruised, our arms in slings, but unafraid, declared our high intentions to all the <em>living</em> of the earth:</p>
+<p><strong>MANIFESTO OF FUTURISM</strong></p>
+<ol>
+<li>We intend to sing the love of danger, the habit of energy and fearlessness.</li>
+<li>Courage, audacity, and revolt will be essential elements of our poetry.</li>
+<li>Up to now literature has exalted a pensive immobility, ecstasy, and sleep. We intend to exalt aggressive action, a feverish insomnia, the racer’s stride, the mortal leap, the punch and the slap.</li>
+<li>We affirm that the world’s magnificence has been enriched by a new beauty: the beauty of speed. A racing car whose hood is adorned with great pipes, like serpents of explosive breath—a roaring car that seems to ride on grapeshot is more beautiful than the Victory of Samothrace.</li>
+<li>We want to hymn the man at the wheel, who hurls the lance of his spirit across the Earth, along the circle of its orbit.</li>
+<li>The poet must spend himself with ardor, splendor, and generosity, to swell the enthusiastic fervor of the primordial elements.</li>
+<li>Except in struggle, there is no more beauty. No work without an aggressive character can be a masterpiece. Poetry must be conceived as a violent attack on unknown forces, to reduce and prostrate them before man.</li>
+<li>We stand on the last promontory of the centuries!&#8230; Why should we look back, when what we want is to break down the mysterious doors of the Impossible? Time and Space died yesterday. We already live in the absolute, because we have created eternal, omnipresent speed.</li>
+<li>We will glorify war—the world’s only hygiene—militarism, patriotism, the destructive gesture of freedom-bringers, beautiful ideas worth dying for, and scorn for woman.</li>
+<li>We will destroy the museums, libraries, academies of every kind, will fight moralism, feminism, every opportunistic or utilitarian cowardice.</li>
+<li>We will sing of great crowds excited by work, by pleasure, and by riot; we will sing of the multicolored, polyphonic tides of revolution in the modern capitals; we will sing of the vibrant nightly fervor of arsenals and shipyards blazing with violent electric moons; greedy railway stations that devour smoke-plumed serpents; factories hung on clouds by the crooked lines of their smoke; bridges that stride the rivers like giant gymnasts, flashing in the sun with a glitter of knives; adventurous steamers that sniff the horizon; deep-chested locomotives whose wheels paw the tracks like the hooves of enormous steel horses bridled by tubing; and the sleek flight of planes whose propellers chatter in the wind like banners and seem to cheer like an enthusiastic crowd.</li>
+</ol>
+<p>It is from Italy that we launch through the world this violently upsetting incendiary manifesto of ours. With it, today, we establish <em>Futurism</em>, because we want to free this land from its smelly gangrene of professors, archaeologists, <em>ciceroni</em> and antiquarians. For too long has Italy been a dealer in second-hand clothes. We mean to free her from the numberless museums that cover her like so many graveyards.</p>
+<p>Museums: cemeteries!&#8230; Identical, surely, in the sinister promiscuity of so many bodies unknown to one another. Museums: public dormitories where one lies forever beside hated or unknown beings. Museums: absurd abattoirs of painters and sculptors ferociously slaughtering each other with color-blows and line-blows, the length of the fought-over walls!</p>
+<p>That one should make an annual pilgrimage, just as one goes to the graveyard on All Souls’ Day—that I grant. That once a year one should leave a floral tribute beneath the <em>Gioconda</em>, I grant you that&#8230; But I don’t admit that our sorrows, our fragile courage, our morbid restlessness should be given a daily conducted tour through the museums. Why poison ourselves? Why rot?</p>
+<p>And what is there to see in an old picture except the laborious contortions of an artist throwing himself against the barriers that thwart his desire to express his dream completely?&#8230; Admiring an old picture is the same as pouring our sensibility into a funerary urn instead of hurtling it far off, in violent spasms of action and creation.</p>
+<p>Do you, then, wish to waste all your best powers in this eternal and futile worship of the past, from which you emerge fatally exhausted, shrunken, beaten down?</p>
+<p>In truth I tell you that daily visits to museums, libraries, and academies (cemeteries of empty exertion, Calvaries of crucified dreams, registries of aborted beginnings!) are, for artists, as damaging as the prolonged supervision by parents of certain young people drunk with their talent and their ambitious wills. When the future is barred to them, the admirable past may be a solace for the ills of the moribund, the sickly, the prisoner&#8230; But we want no part of it, the past, we the young and strong <em>Futurists</em>!</p>
+<p>So let them come, the gay incendiaries with charred fingers! Here they are! Here they are!&#8230; Come on! Set fire to the library shelves! Turn aside the canals to flood the museums!&#8230; Oh, the joy of seeing the glorious old canvases bobbing adrift on those waters, discolored and shredded!&#8230; Take up your pickaxes, your axes and hammers and wreck, wreck the venerable cities, pitilessly!</p>
+<p>The oldest of us is thirty: so we have at least a decade for finishing our work. When we are forty, other younger and stronger men will probably throw us in the wastebasket like useless manuscripts—we want it to happen!</p>
+<p>They will come against us, our successors, will come from far away, from every quarter, dancing to the winged cadence of their first songs, flexing the hooked claws of predators, sniffing doglike at the academy doors the strong odor of our decaying minds, which will have already been promised to the literary catacombs.</p>
+<p>But we won’t be there&#8230; At last they’ll find us—one winter’s night—in open country, beneath a sad roof drummed by a monotonous rain. They’ll see us crouched beside our trembling aeroplanes in the act of warming our hands at the poor little blaze that our books of today will give out when they take fire from the flight of our images.</p>
+<p>They’ll storm around us, panting with scorn and anguish, and all of them, exasperated by our proud daring, will hurtle to kill us, driven by a hatred the more implacable the more their hearts will be drunk with love and admiration for us.</p>
+<p>Injustice, strong and sane, will break out radiantly in their eyes.</p>
+<p>Art, in fact, can be nothing but violence, cruelty, and injustice.</p>
+<p>The oldest of us is thirty: even so we have already scattered treasures, a thousand treasures of force, love, courage, astuteness, and raw will-power; have thrown them impatiently away, with fury, carelessly, unhesitatingly, breathless, and unresting&#8230; Look at us! We are still untired! Our hearts know no weariness because they are fed with fire, hatred, and speed!&#8230; Does that amaze you?</p>
+<p>It should, because you can never remember having lived! Erect on the summit of the world, once again we hurl our defiance at the stars!</p>
+<p>You have objections?—Enough! Enough! We know them&#8230; We’ve understood!&#8230; Our fine deceitful intelligence tells us that we are the revival and extension of our ancestors—Perhaps!&#8230; If only it were so!—But who cares? We don’t want to understand!&#8230; Woe to anyone who says those infamous words to us again!</p>
+<p>Lift up your heads!</p>
+<p>Erect on the summit of the world, once again we hurl defiance to the stars!</p>
+<p><a href="https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo.jpg"><img class="aligncenter size-full wp-image-2039" title="manifestofuturismo" alt="" src="https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo.jpg" width="422" height="599" srcset="https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo.jpg 422w, https://www.italianfuturism.org/wp-content/uploads/2009/02/manifestofuturismo-211x300.jpg 211w" sizes="(max-width: 422px) 100vw, 422px" /></a></p>
+<div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-63265941-131-5a9e8d5650e6d' data-src='https://widgets.wp.com/likes/#blog_id=63265941&amp;post_id=131&amp;origin=www.italianfuturism.org&amp;obj_id=63265941-131-5a9e8d5650e6d' data-name='like-post-frame-63265941-131-5a9e8d5650e6d'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>			</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+						
+<div id="comments" class="comments-area">
+
+	
+		<div class="comments-area-wrapper">
+
+		<h2 class="comments-title">
+			92 Replies to &ldquo;The Founding and Manifesto of Futurism&rdquo;		</h2>
+
+				<nav id="comment-nav-above" class="navigation comment-navigation comment-navigation-above" role="navigation">
+			<h1 class="screen-reader-text">Comment navigation</h1>
+			<div class="nav-links">
+				<div class="nav-previous"><a href="https://www.italianfuturism.org/manifestos/foundingmanifesto/comment-page-1/#comments" >Older Comments</a></div>
+				<div class="nav-next"></div>
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-above -->
+		
+		<ol class="comment-list">
+					<li id="comment-3178" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://0901750tay.wordpress.com/2015/04/01/manifesto-of-futurism-summary/' rel='external nofollow' class='url'>MANIFESTO OF FUTURISM (summary) | OPENing Up</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3179" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://primitiveentertainment.wordpress.com/2015/04/03/the-primitive-manifesto-a-secret-collage-operation-disguised-as-a-bundle-of-warm-towels/' rel='external nofollow' class='url'>&#8220;The Primitive Manifesto! (A Secret, Collage Operation Disguised as a Bundle of Warm Towels)&#8221; | The Primitive Entertainment Workshop</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3180" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://mulliken.okstate.edu/inchicore/' rel='external nofollow' class='url'>Inchicore | Mapping Dubliners Project</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3181" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://tim770503.wordpress.com/2015/04/11/%e6%9c%aa%e4%be%86%e4%b8%bb%e7%be%a9%e5%ae%a3%e8%a8%80/' rel='external nofollow' class='url'>未來主義宣言 | Bwo Rong Blog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3182" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.nordikhus.com/%eb%b6%81%ec%9c%a0%eb%9f%bd-%ec%8a%a4%ec%b9%b8%eb%94%94%eb%82%98%eb%b9%84%ec%95%84-%eb%94%94%ec%9e%90%ec%9d%b8%ec%9d%98-%ec%97%ad%ec%82%ac-2/' rel='external nofollow' class='url'>북유럽, 스칸디나비아 디자인의 역사 (2) | 노르딕후스</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3183" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.leadersagainstroutine.nl/futurism/' rel='external nofollow' class='url'>Futurism standards, How to Determine Futurists&#039; Quality</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3185" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.fjordreview.com/american-in-paris-christopher-wheeldon/' rel='external nofollow' class='url'>Innocent Abroad - Fjord Review</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3186" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.howtopastel.com/2015/05/frantisek-kupka-figurative-pastels-1906-1911/' rel='external nofollow' class='url'>Frantisek Kupka - His Figurative Pastels 1906-1911</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3188" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://nitognoci.wordpress.com/2015/05/31/300/' rel='external nofollow' class='url'>nitognoci</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3192" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.pedrosilmon.com/blog/2015/07/photography/' rel='external nofollow' class='url'>Photography &laquo; Pedro Silmon The Blog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3193" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.midcenturymoderngroovy.com/?p=1679' rel='external nofollow' class='url'>A Clockwork Orange Comparison | Mid Century Modern Groovy</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3194" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://howardbosler.wordpress.com/2015/07/20/a-clockwork-orange-comparison/' rel='external nofollow' class='url'>A Clockwork Orange Comparison | Howard Bosler Artist</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3196" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://awslibrary.wordpress.com/2015/10/18/low-definition-high-definition-re-definition-constellating-stars-along-i-280/' rel='external nofollow' class='url'>Low-Definition, High-Definition, &amp; Re-Definition: Constellating Stars Along I-280 | The Library at Annie Wright Schools</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3197" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://uttercontempt.wordpress.com/2015/10/21/fatherland/' rel='external nofollow' class='url'>Fatherland | Utter Contempt</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3198" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://uttercontempt.wordpress.com/2015/10/29/fatherland-uber-alles/' rel='external nofollow' class='url'>Fatherland Über Alles | Utter Contempt</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3199" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://thewhorer.net/2014/10/20/episode-66-salo-or-the-120-days-of-sodom-1975/' rel='external nofollow' class='url'>Episode 66: Salò or the 120 Days of Sodom (1975) | The Whorer</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3200" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://theanxietyandtheartist.wordpress.com/2015/11/16/a-rant-in-two-parts/' rel='external nofollow' class='url'>A Rant (In Two Parts) | the anxiety and the artist</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3201" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://drunkdragondotorg.wordpress.com/2015/12/07/a-digital-romanticist-manifesto/' rel='external nofollow' class='url'>A Digital Romanticist Manifesto | DrunkDragon</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3202" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://veroloves.me/2016/01/02/in-the-thought-of-style/' rel='external nofollow' class='url'>In the Thought of Style | veroloves</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3203" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://racemochridhe.wordpress.com/2016/01/15/the-lessons-of-winter-part-2/' rel='external nofollow' class='url'>The Lessons of Winter, Part 2 | Race MoChridhe</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3204" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://ars374blog.wordpress.com/2016/02/12/breaking-the-grid-futurism/' rel='external nofollow' class='url'>Breaking the Grid: Futurism | ars374blog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3207" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://shortstorylongsilence.wordpress.com/2016/03/19/manifestos/' rel='external nofollow' class='url'>Manifestos &#8211; Short stories</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3209" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://sindhujatjhtcblog.wordpress.com/2016/03/28/the-power-of-words/' rel='external nofollow' class='url'>The power of words &#8211; sindhujatjhtcblog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3211" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://robertlindsay.wordpress.com/2016/06/29/robert-stark-interviews-rabbit-about-futurism/' rel='external nofollow' class='url'>Robert Stark Interviews Rabbit about Futurism | Beyond Highbrow - Robert Lindsay</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3212" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://murdockarts.wordpress.com/2016/07/04/the-gutai-art-manifestos-relationship-to-the-western-avant-garde/' rel='external nofollow' class='url'>The Gutai Art Manifesto&#8217;s relationship to the Western Avant-Garde | Art, Process and Design</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3213" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://nurinoir.wordpress.com/2016/07/28/moderne-kunst-en-hedendaagse-kunst-das-toch-hetzelfde/' rel='external nofollow' class='url'>Moderne kunst en hedendaagse kunst, da&#8217;s toch hetzelfde? | nurinoir</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3214" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://joannecarrubba.wordpress.com/2016/09/14/cubism-and-related-movements/' rel='external nofollow' class='url'>Cubism and Related Movements &#8211; Joanne Carrubba</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3215" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://datingqia.wordpress.com/2016/09/25/the-beautiful-cars-of-pebble-beach-concours-delegance-could-represent-the-end-of-an-era/' rel='external nofollow' class='url'>The beautiful cars of Pebble Beach Concours d&#8217;Elegance could represent the end of an era &#8211; datingqia</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3216" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://animation942.wordpress.com/2016/10/15/manifesto-of-movement/' rel='external nofollow' class='url'>Manifesto of Movement &#8211; ANIMATION.</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3217" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://andaavramescu.wordpress.com/2016/10/22/neo-futurism-constellation-yr-1/' rel='external nofollow' class='url'>Neo- Futurism (Constellation yr 1) &#8211; Anda Avramescu</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3218" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://theartdiariessite.wordpress.com/2016/10/23/manifesto-of-futurism/' rel='external nofollow' class='url'>Manifesto of Futurism &#8211; Site Title</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3225" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://westconnmfa.wordpress.com/2016/11/25/tango-with-crows-concrete-poetry/' rel='external nofollow' class='url'>Tango with Crows &#8211; Concrete Poetry | WestConn MFA in Creative &amp; Professional Writing</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3252" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.firstpersonscholar.com/a-line-in-a-cyclone/' rel='external nofollow' class='url'>A Line in a Cyclone &#8211; First Person Scholar</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3280" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.circleseven.co.uk/2017/03/27/dat501-creative-strategies-personal-manifesto/' rel='external nofollow' class='url'>DAT501 - Creative Strategies: Personal Manifesto - Matthew French</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-3739" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://franatatayblog.wordpress.com/2017/01/15/manifesto-manifestoed-manifestoing-research/' rel='external nofollow' class='url'>Manifesto, Manifestoed, Manifestoing: Research &#8211; My Blog</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4081" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://contemporarylynx.co.uk/art-science-art-manifestos' rel='external nofollow' class='url'>ART &amp; SCIENCE: ART MANIFESTOS | Contemporary Lynx - Promoting Polish art in the world</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4428" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://cycle-space.com/bookmark-behoovingmoving-com/' rel='external nofollow' class='url'>Bookmark behoovingmoving.com</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4429" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://weeklyhubris.com/of-nostalgia-going-sideways-beautifully-best-of-wh/' rel='external nofollow' class='url'>Of Nostalgia &#038; Going Sideways Beautifully (Best of WH)</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4907" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://thrivewithpassionblog.wordpress.com/2017/10/27/word-orgasm/' rel='external nofollow' class='url'>word orgasm &#8211; Adding lipstick, paint, and love</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4932" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='http://www.northernvista.org/philosophy/manifesto-of-the-children-of-the-mountains/' rel='external nofollow' class='url'>Manifesto of the Children of the Mountains &#8211; Northern Vista</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-4937" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://gilbertmovingimage.wordpress.com/2017/11/03/futurism-manifesto/' rel='external nofollow' class='url'>Futurism Manifesto &#8211; Gilbert Fleming</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-5366" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href='https://numberedtheses.wordpress.com/2017/12/29/manifesto-of-futurism-or-lets-murder-the-moonlight/' rel='external nofollow' class='url'>Manifesto of Futurism or &#8216;Let&#8217;s Murder the Moonlight!&#8217; &#8211; Numbered Theses</a> 			</div>
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+				<nav id="comment-nav-below" class="navigation comment-navigation comment-navigation-below" role="navigation">
+			<h1 class="screen-reader-text">Comment navigation</h1>
+			<div class="nav-links">
+				<div class="nav-previous"><a href="https://www.italianfuturism.org/manifestos/foundingmanifesto/comment-page-1/#comments" >Older Comments</a></div>
+				<div class="nav-next"></div>
+			</div><!-- .nav-links -->
+		</nav><!-- #comment-nav-above -->
+		
+	</div><!-- .comments-area-wrapper -->
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/manifestos/foundingmanifesto/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://www.italianfuturism.org/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='131' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="247644c667" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="244"/></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+					
+				</main><!-- #main -->
+			</div><!-- #primary -->
+
+			<div id="site-sidebar" class="sidebar-area col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+	<div id="secondary" class="sidebar widget-area">
+		<aside id="search-4" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://www.italianfuturism.org/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2><form action="https://www.italianfuturism.org" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="3">Events</option>
+	<option class="level-0" value="4">Exhibitions</option>
+	<option class="level-0" value="238">Futurism News Bulletin</option>
+	<option class="level-0" value="12">Interviews</option>
+	<option class="level-0" value="8">Just for Fun</option>
+	<option class="level-0" value="1">Misc.</option>
+	<option class="level-0" value="11">Opportunities</option>
+	<option class="level-0" value="179">Publications</option>
+	<option class="level-0" value="236">Reviews</option>
+	<option class="level-0" value="6">Scholarship</option>
+</select>
+</form>
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="facebook-likebox-2" class="widget widget_facebook_likebox">		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/Italian-Futurism-34927239056/" data-width="340"  data-height="432" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Italian-Futurism-34927239056/"><a href="https://www.facebook.com/Italian-Futurism-34927239056/"></a></blockquote></div>
+		</div>
+		</aside><aside id="archives-3" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<label class="screen-reader-text" for="archives-dropdown-3">Archives</label>
+		<select id="archives-dropdown-3" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+			
+			<option value="">Select Month</option>
+				<option value='https://www.italianfuturism.org/2018/01/'> January 2018 </option>
+	<option value='https://www.italianfuturism.org/2017/08/'> August 2017 </option>
+	<option value='https://www.italianfuturism.org/2017/04/'> April 2017 </option>
+	<option value='https://www.italianfuturism.org/2016/11/'> November 2016 </option>
+	<option value='https://www.italianfuturism.org/2016/10/'> October 2016 </option>
+	<option value='https://www.italianfuturism.org/2016/07/'> July 2016 </option>
+	<option value='https://www.italianfuturism.org/2016/06/'> June 2016 </option>
+	<option value='https://www.italianfuturism.org/2016/03/'> March 2016 </option>
+	<option value='https://www.italianfuturism.org/2015/09/'> September 2015 </option>
+	<option value='https://www.italianfuturism.org/2015/08/'> August 2015 </option>
+	<option value='https://www.italianfuturism.org/2015/06/'> June 2015 </option>
+	<option value='https://www.italianfuturism.org/2015/05/'> May 2015 </option>
+	<option value='https://www.italianfuturism.org/2015/04/'> April 2015 </option>
+	<option value='https://www.italianfuturism.org/2015/03/'> March 2015 </option>
+	<option value='https://www.italianfuturism.org/2014/12/'> December 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/10/'> October 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/09/'> September 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/08/'> August 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/06/'> June 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/05/'> May 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/04/'> April 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/03/'> March 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/02/'> February 2014 </option>
+	<option value='https://www.italianfuturism.org/2014/01/'> January 2014 </option>
+	<option value='https://www.italianfuturism.org/2013/12/'> December 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/11/'> November 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/10/'> October 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/09/'> September 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/07/'> July 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/06/'> June 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/05/'> May 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/04/'> April 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/03/'> March 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/02/'> February 2013 </option>
+	<option value='https://www.italianfuturism.org/2013/01/'> January 2013 </option>
+	<option value='https://www.italianfuturism.org/2012/12/'> December 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/11/'> November 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/10/'> October 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/09/'> September 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/08/'> August 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/07/'> July 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/06/'> June 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/05/'> May 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/04/'> April 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/03/'> March 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/02/'> February 2012 </option>
+	<option value='https://www.italianfuturism.org/2012/01/'> January 2012 </option>
+	<option value='https://www.italianfuturism.org/2011/12/'> December 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/11/'> November 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/10/'> October 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/09/'> September 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/08/'> August 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/07/'> July 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/06/'> June 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/05/'> May 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/04/'> April 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/03/'> March 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/02/'> February 2011 </option>
+	<option value='https://www.italianfuturism.org/2011/01/'> January 2011 </option>
+	<option value='https://www.italianfuturism.org/2010/12/'> December 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/11/'> November 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/10/'> October 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/09/'> September 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/08/'> August 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/07/'> July 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/06/'> June 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/05/'> May 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/04/'> April 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/03/'> March 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/02/'> February 2010 </option>
+	<option value='https://www.italianfuturism.org/2010/01/'> January 2010 </option>
+	<option value='https://www.italianfuturism.org/2009/12/'> December 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/11/'> November 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/10/'> October 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/09/'> September 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/08/'> August 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/07/'> July 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/06/'> June 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/05/'> May 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/04/'> April 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/03/'> March 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/02/'> February 2009 </option>
+	<option value='https://www.italianfuturism.org/2009/01/'> January 2009 </option>
+	<option value='https://www.italianfuturism.org/2008/12/'> December 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/11/'> November 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/10/'> October 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/09/'> September 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/08/'> August 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/07/'> July 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/06/'> June 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/05/'> May 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/04/'> April 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/03/'> March 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/02/'> February 2008 </option>
+	<option value='https://www.italianfuturism.org/2008/01/'> January 2008 </option>
+
+		</select>
+		</aside><aside id="linkcat-7" class="widget widget_links"><h2 class="widget-title">Links</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.albertobragaglia.com/index.html">Alberto Bragaglia website</a></li>
+<li><a href="http://www.antoniofiore.it">Antonio Fiore</a></li>
+<li><a href="http://www.istitutocalvino.it/studenti/siti/santelia/index.htm">Antonio Sant&#039;Elia</a></li>
+<li><a href="http://www.gerardodottori.net/">Archivi Gerardo Dottori</a></li>
+<li><a href="http://www.lombardiabeniculturali.it/archivi/complessi-archivistici/MIBA0182C1/">Archivio Carlo Erba</a></li>
+<li><a href="http://www.archiviocrispolti.it/fNewsDettaglio.asp?idNews=28">Archivio Crispolti</a></li>
+<li><a href="http://english.mart.trento.it/archivi_900.jsp?ID_LINK=803&#038;area=137">Archivio del &#039;900 (Mart)</a></li>
+<li><a href="http://www.archiviopipporizzo.it/">Archivio Pippo Rizzo</a></li>
+<li><a href="http://www.archiviostoricofuturistisiciliani.it/">Archivio Storico dei Futuristi Siciliani</a></li>
+<li><a href="http://www.ginnacorra.it/">Arnaldo Ginna e Bruno Corra &#8211; Sito Ufficiale</a></li>
+<li><a href="http://www.library.yale.edu/beinecke/">Beinecke Library</a></li>
+<li><a href="http://www.italianmodernart.org/">Center for Italian Modern Art</a></li>
+<li><a href="http://palazzeschiwm.unifi.it/">Centro di Studi Aldo Palazzeschi</a></li>
+<li><a href="http://cucinafuturista.blogspot.com/" title="Futurist Cooking blog">Cucina Futurista</a></li>
+<li><a href="http://www.etc.cmu.edu/projects/balli-plastici/">Depero Futuristi (Carnegie Mellon University)</a></li>
+<li><a href="http://www.estorickcollection.com/home.php">Estorick Collection</a></li>
+<li><a href="http://www.fluxus.org/">Fluxus Portal</a></li>
+<li><a href="http://www.fondazioneechaurrensalaris.it/">Fondazione Echaurren Salaris</a></li>
+<li><a href="http://oriani.org/">Fondazione Pippo Oriani</a></li>
+<li><a href="http://depero.it/">Fortunato Depero &#8211; Sito Ufficiale</a></li>
+<li><a href="http://www.futur-ism.it/">Futur-ism</a></li>
+<li><a href="http://www.lacerba.it/">Futurist Restaurant Lacerba</a></li>
+<li><a href="http://www.linapassalacqua.com/">Futurista dei nostri tempi</a></li>
+<li><a href="http://www.vivailfuturismo.kulturserver.de/">Futuristische Bild- und Raumkonzepte</a></li>
+<li><a href="http://www.futuristisiti.com/">FuturistiSiti</a></li>
+<li><a href="http://www.culturaroma.it/servizio/59/65/8231/8565/8593/calendario_evento.asp">FUTUROMA</a></li>
+<li><a href="http://www.gnam.beniculturali.it/">Galleria nazionale d&#8217;arte moderna, Rome</a></li>
+<li><a href="http://www.gerardodottori.net/">Gerardo Dottori</a></li>
+<li><a href="http://archives.getty.edu/R?RN=177745641">Getty Archive Search</a></li>
+<li><a href="http://www.getty.edu/research/special_collections/highlights/italian_futurism/">Getty Research Institute: Special Collections</a></li>
+<li><a href="http://www.artpalazzoreale.it/INDE_M83.htm">Giacomo Balla: La modernità futurista</a></li>
+<li><a href="http://www.guggenheim-venice.it/inglese/collections/collection2.php?id_cat=14">Gianni Mattioli Collection</a></li>
+<li><a href="http://www.giovanni-lista.com/">Giovanni Lista</a></li>
+<li><a href="http://www.giovannipapini.it/Gianfalco/">Giovanni Papini website</a></li>
+<li><a href="http://www.guggenheimcollection.org/">Guggenheim Collection Search</a></li>
+<li><a href="http://sdrc.lib.uiowa.edu/dada/index.html">International Dada Archive (University of Iowa)</a></li>
+<li><a href="http://www.baldessari-iras.it/">Iras Baldessari &#8211; Sito Ufficiale</a></li>
+<li><a href="http://www.isisuf.org/">ISISUF (Instituto Internazionale di Studi sul Futurismo)</a></li>
+<li><a href="http://www.architetturafuturista.it/">Italian Futurist Architecture</a></li>
+<li><a href="http://italianfuturism.tumblr.com/">ItalianFuturism.org on Tumblr</a></li>
+<li><a href="http://futurismseminar.blogspot.com/">Jeffrey Schnapp&#8217;s Futurism Seminar Blog</a></li>
+<li><a href="http://www.arengario.it/futurismo/index-futurismo.htm">L&#039;Arengario Studio Bibliografico</a></li>
+<li><a href="http://luigi.russolo.free.fr/som1.html">Luigi Russolo</a></li>
+<li><a href="http://www.microarte.org/">M.I.C.RO. Movimento Internazionale Culturale Roma</a></li>
+<li><a href="http://beinecke.library.yale.edu/collections/highlights/filippo-tommaso-marinettis-libroni-futurism">Marinetti&#039;s Libroni at the Beinecke Rare Book and Manuscript Library</a></li>
+<li><a href="http://english.mart.trento.it/">Mart (Museo di arte moderna e contemporanea di Trento e Rovereto)</a></li>
+<li><a href="http://www.finazzerflory.it/">Massimiliano Finazzer Flory</a></li>
+<li><a href="http://www.minodellesite.com/">Mino Delle Site</a></li>
+<li><a href="http://www.moma.org/">MoMA</a></li>
+<li><a href="http://www.museodelnovecento.org/">Museo del Novecento</a></li>
+<li><a href="http://www.museonovecento.it/en/">Museo Novecento Firenze</a></li>
+<li><a href="http://www.museoardengosoffici.it/">Museo Soffici</a></li>
+<li><a href="http://www.fondazioneprimoconti.org/">Primo Conti Foundation</a></li>
+<li><a href="http://futurstro.blogspot.com/">Przemysław Strożek</a></li>
+<li><a href="http://www.sprengel-museum.com">Sprengel Museum</a></li>
+<li><a href="http://www.tate.org.uk/servlet/WorksList?searchid=17960&#038;page=1&#038;gt;">Tate Collection Search</a></li>
+<li><a href="http://www.microarte.org/taverna-dei-futuristi.html">Taverna dei Futuristi</a></li>
+<li><a href="http://www.cirulliarchive.org/index.php">The Massimo &amp; Sonia Cirulli Archive</a></li>
+<li><a href="http://www.ubuweb.com/">UbuWeb Foundation</a></li>
+<li><a href="http://www.futurismus.kulturserver.de/">Viva il Futurismo!</a></li>
+<li><a href="http://www.wolfsoniana.it/index.htm">Wolfson Collection</a></li>
+<li><a href="http://artgallery.yale.edu/">Yale Art Gallery</a></li>
+
+	</ul>
+</aside>
+	</div><!-- .sidebar -->
+</div><!-- .col-* columns of main sidebar -->
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+
+		<div class="site-info">
+			<div class="site-info-inside">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-xxl-12">
+
+							<div class="credits">
+								<div class="copyright wisteria-copyright">&copy; Copyright 2018 &#8211; <a href="https://www.italianfuturism.org/">Italian Futurism</a></div><div class="designer wisteria-designer"><a href="https://wpfriendship.com/" title="Wisteria Theme">Wisteria Theme</a> <span>&sdot;</span> Powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></div>							</div><!-- .credits -->
+
+						</div><!-- .col -->
+					</div><!-- .row -->
+				</div><!-- .container -->
+
+			</div><!-- .site-info-inside -->
+		</div><!-- .site-info -->
+
+	</footer><!-- #colophon -->
+
+</div><!-- #page .site-wrapper -->
+
+	<div style="display:none">
+	</div>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201810'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2018Maraa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.9.3'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/themes/wisteria/js/enquire.js?ver=2.1.2'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/themes/wisteria/js/hover-intent.js?ver=r7'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/themes/wisteria/js/superfish.js?ver=1.7.5'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/themes/wisteria/js/custom.js?ver=1.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/jetpack/_inc/build/facebook-embed.min.js'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-includes/js/wp-embed.min.js?ver=4.9.3'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/jetpack/_inc/build/postmessage.min.js?ver=5.7'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/jetpack/_inc/build/jquery.jetpack-resize.min.js?ver=5.7'></script>
+<script type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?ver=5.7'></script>
+<script async="async" type='text/javascript' src='https://www.italianfuturism.org/wp-content/plugins/akismet/_inc/form.js?ver=4.0.2'></script>
+	<iframe src='https://widgets.wp.com/likes/master.html?ver=20171126#ver=20171126' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script type='text/javascript' src='https://stats.wp.com/e-201810.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.7',blog:'63265941',post:'131',tz:'-4',srv:'www.italianfuturism.org'} ]);
+	_stq.push([ 'clickTrackerInit', '63265941', '131' ]);
+</script>
+</body>
+</html>

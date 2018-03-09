@@ -1,0 +1,346 @@
+   #[1]RSS 2.0 [2]:wq - blog » Natural Language Processing in Clojure with clojure-opennlp Comments Feed [3]Annoyance,
+   colored diffs in perforce [4]Context searching using Clojure-OpenNLP
+
+     * [5]Log in
+     * [6]Subscribe RSS Feed
+
+[7]:wq - blog
+
+     * Tu fui, ego eris
+     * [8]Home
+     * [9]About
+     * [10]NSM Console
+
+
+     * About the author
+       [11]Lee Hinman writes S-expressions for Sonian all day. Feel free to email me at lee [at] writequit [dot] org. If
+       you do contact me, I highly recommend that you use [12]some sort of encryption.
+       I enjoy doing software development, security research and writing tools and libraries (mostly in Clojure or Ruby).
+     *
+       [13]Tumblr
+       [14]Look me up on Twitter
+       [15]Get a copy of my gpg public key
+       AIM: thnetos
+       Jabber: thnetos@dukgo.com
+       Join me on irc (dakrone) in #clojure on Freenode!
+     * [16]__________ [17]GO
+     * Pages
+          + [18]About
+          + [19]NSM Console
+     * Recent Comments
+          + Dude-man on [20]Not-as-simple perl script for ZFS snapshot auditing
+          + Dude-man on [21]Not-as-simple perl script for ZFS snapshot auditing
+          + Robin on [22]Quick javascript de-obfuscation with python
+          + Steve Mustafa on [23]How I develop Clojure with Vim
+          + [24]Jason on [25]Annoyance, colored diffs in perforce
+     * [26]RSS [27]Twitter feed:
+     * [28]RSS [29]On Tumblr
+          + [30]For a long time I thought be opening lyrics were "The...
+          + [31]Scribbling in a notebook I wonder, will someone read this when I pass away? Will I read my...
+          + [32]via http://www.swiss-miss.com/2012/06/this-is-coffee.html
+          + [33]Bosques de mi Mente's latest song
+          + [34]fiftyfootshadows: Jesse Rosten
+     * Archives
+          + [35]December 2014
+          + [36]October 2013
+          + [37]March 2011
+          + [38]January 2011
+          + [39]September 2010
+          + [40]August 2010
+          + [41]April 2010
+          + [42]March 2010
+          + [43]February 2010
+          + [44]December 2009
+          + [45]October 2009
+          + [46]August 2009
+          + [47]July 2009
+          + [48]June 2009
+          + [49]May 2009
+          + [50]March 2009
+          + [51]January 2009
+          + [52]December 2008
+          + [53]October 2008
+          + [54]September 2008
+          + [55]August 2008
+          + [56]July 2008
+          + [57]June 2008
+          + [58]May 2008
+          + [59]April 2008
+          + [60]March 2008
+          + [61]February 2008
+          + [62]January 2008
+          + [63]December 2007
+          + [64]November 2007
+          + [65]October 2007
+          + [66]September 2007
+          + [67]August 2007
+          + [68]July 2007
+          + [69]June 2007
+          + [70]May 2007
+
+[71]Natural Language Processing in Clojure with clojure-opennlp
+
+   March 8, 2010
+
+   NOTE: I am not a linguist, please feel free to correct me in the comments if I use the wrong term!
+
+   From [72]Wikipedia:
+
+   Natural Language processing (NLP) is a field of computer science and linguistics concerned with the interactions
+   between computers and human (natural) languages. Natural language generation systems convert information from computer
+   databases into readable human language. Natural language understanding systems convert samples of human language into
+   more formal representations such as parse trees or first-order logic structures that are easier for computer programs
+   to manipulate. Many problems within NLP apply to both generation and understanding; for example, a computer must be
+   able to model morphology (the structure of words) in order to understand an English sentence, and a model of morphology
+   is also needed for producing a grammatically correct English sentence.
+
+   [73]Clojure-opennlp is a library to interface with the OpenNLP (Open Natural Language Processing) library of functions,
+   which provide linguistic tools to perform on various blocks of text. Once a linguistic interpretation of text is
+   possible, a lot of really interesting applications present themselves. Let's jump right in!
+
+Basic Example usage (from a REPL)
+
+     (use 'clojure.contrib.pprint) ; just for this example
+     (use 'opennlp.nlp) ; make sure opennlp.jar is in your classpath
+
+   You will need to make the processing functions using the model files. These assume you're running from the root project
+   directory of the git repository (where some models are included). You can also download the model files from the
+   opennlp project at [74]http://opennlp.sourceforge.net/models/
+
+     user=> (def get-sentences (make-sentence-detector "models/EnglishSD.bin.gz"))
+     user=> (def tokenize (make-tokenizer "models/EnglishTok.bin.gz"))
+     user=> (def pos-tag (make-pos-tagger "models/tag.bin.gz"))
+
+   For name-finders in particular, it's possible to have multiple model files:
+
+     user=> (def name-find (make-name-finder "models/namefind/person.bin.gz" "models/namefind/organization.bin.gz"))
+
+   The (make-<whateverizer> "modelfile.bin.gz") functions return functions that perform the linguistic offering. I decided
+   to have them return functions so multiple methods doing the same sort of action could be created with different model
+   files (perhaps different language models and such) without having the pass the model file every time you wanted to
+   process some text.
+
+   After creating the utility methods, we can use the functions to perform operations on text. For instance, since we
+   defined the sentence-detector as `get-sentences', we can us that method to split text by sentences:
+
+     user=> (pprint (get-sentences "First sentence. Second sentence? Here is another one. And so on and so forth - you
+     get the idea..."))
+     ["First sentence. ", "Second sentence? ", "Here is another one. ",
+     "And so on and so forth - you get the idea..."]
+     nil
+
+   Or split a sentence into tokens using the tokenize function:
+
+     user=> (pprint (tokenize "Mr. Smith gave a car to his son on Friday"))
+     ["Mr.", "Smith", "gave", "a", "car", "to", "his", "son", "on",
+     "Friday"]
+     nil
+
+   Once we have a sequence of tokens, we can do what's called POS Tagging. POS Tagging takes a list of words from only one
+   sentence and applies an algorithms (using the morphology model) to determine what kind of tag to apply to each word:
+
+     user=> (pprint (pos-tag (tokenize "Mr. Smith gave a car to his son on Friday.")))
+     (["Mr." "NNP"]
+     ["Smith" "NNP"]
+     ["gave" "VBD"]
+     ["a" "DT"]
+     ["car" "NN"]
+     ["to" "TO"]
+     ["his" "PRP$"]
+     ["son" "NN"]
+     ["on" "IN"]
+     ["Friday." "NNP"])
+     nil
+
+   You can check out [75]a list of all the tags if you want to know what they stand for.
+
+   The clojure-opennlp library also features a name finder, however it is extremely rudimentary at this point and won't
+   detect all names:
+
+     user=> (name-find (tokenize "My name is Lee, not John."))
+     ("Lee" "John")
+
+Filters
+
+   In the library, I also provide some simple filters that can be used to pare down a list of pos-tagged tokens using
+   regular expressions. There are some preset filters available, as well as a macro for generating your own filters:
+
+     (use 'opennlp.tools.filters)
+
+     user=> (pprint (nouns (pos-tag (tokenize "Mr. Smith gave a car to his son on Friday."))))
+     (["Mr." "NNP"]
+     ["Smith" "NNP"]
+     ["car" "NN"]
+     ["son" "NN"]
+     ["Friday" "NNP"])
+     nil
+     user=> (pprint (verbs (pos-tag (tokenize "Mr. Smith gave a car to his son on Friday."))))
+     (["gave" "VBD"])
+     nil
+
+   Creating your own filter:
+
+     user=> (pos-filter determiners #"^DT")
+     #'user/determiners
+     user=> (doc determiners)
+     -------------------------
+     user/determiners
+     ([elements__52__auto__])
+     Given a list of pos-tagged elements, return only the determiners in a list.
+     nil
+     user=> (pprint (determiners (pos-tag (tokenize "Mr. Smith gave a car to his son on Friday."))))
+     (["a" "DT"])
+     nil
+
+   Check out the [76]filters.clj file for a full list of out-of-the-box filters.
+
+   That's about all there is in the library at the moment, so I hope that made sense. Unfortunately clojars.org does not
+   provide a nice way to public documentation for a library, so the documentation in this post and on the github page will
+   have to do for now.
+
+   This library is [77]available on clojars for inclusion in leiningen projects, or [78]on github if you're interested in
+   the source. This is a fairly new project, and not all OpenNLP features are exposed at the moment so feedback is
+   definitely encouraged. In the next post I'll explain an in-depth example of how these functions can be used to enhance
+   a searching engine. EDIT: It's up! Check out "[79]Context searching using clojure-opennlp."
+
+   UPDATE: Hiredman has let me know that the jar on clojars is missing the 3 dependencies used for the library. I'm busy
+   working on writing pom.xml's for the jars so I can upload them to clojars as dependencies. In the meantime, make sure
+   you have [80]the 3 jars in the lib directory (of the github project) in your classpath. Feel free to report any other
+   issues on the github tracker or in the comments.
+
+   UPDATE 2: I fixed the project.clj file and pushed new versions of opennlp.jar and the dependency jars. A regular `lein
+   deps' should work now.
+
+   tags: [81]clojure, [82]nlp, [83]opennlp
+   posted in [84]clojure, [85]nlp, [86]opennlp by Lee
+
+4 Comments to "Natural Language Processing in Clojure with clojure-opennlp"
+
+    1. [87]Today in the Intertweets (March 8th Ed) | disclojure: all things clojure wrote:
+       [...] new blog post about my library: Natural Language Processing in #Clojure with clojure-opennlp (here, via
+       @thnetos) -- Grab a text, break it into sentences, parse the words and tag them. [...]
+       [88]Link | March 9th, 2010 at 12:37 am
+    2. [89]Context searching using Clojure-OpenNLP : :wq - blog wrote:
+       [...] is an addon to my previous post, "Natural Language Processing in Clojure with clojure-opennlp". If you're
+       unfamiliar with NLP or the clojure-opennlp library, please read the [...]
+       [90]Link | March 9th, 2010 at 11:31 am
+    3. [91]Clojure - Destillat #5 | duetsch.info - Open Source, Wet-, Web-, Software wrote:
+       [...] Natural Language Processing in Clojure with clojure-opennlp [...]
+       [92]Link | March 16th, 2010 at 3:13 am
+    4. Jörn Kottmann wrote:
+       Hi,
+       nice to see that you use OpenNLP. I am one of the maintainers.
+       There is actually a maven OpenNLP repository:
+       OpenNLPRepository [93]http://opennlp.sourceforge.net/maven2
+       All the dependencies are also in the repo.
+       You can add the OpenNLP dependency with:
+       opennlp
+       opennlp-tools
+       1.4.3
+       Jörn
+       [94]Link | March 24th, 2010 at 3:01 pm
+
+
+
+                     Powered by [95]Wordpress and [96]MySQL. Theme by [97]Shlomi Noach, [98]openark.org
+
+References
+
+   1. https://writequit.org/blog/feed/index.html
+   2. https://writequit.org/blog/2010/03/08/natural-language-processing-in-clojure-with-clojure-opennlp/feed/index.html
+   3. https://writequit.org/blog/2010/02/01/annoyance-colored-diffs-in-perforce/index.html
+   4. https://writequit.org/blog/index.html%3Fp=351.html
+   5. https://writequit.org/blog/wp-login.php.html
+   6. https://writequit.org/blog/feed/index.html
+   7. https://writequit.org/blog/index.html
+   8. https://writequit.org/blog/index.html
+   9. https://writequit.org/blog/index.html%3Fpage_id=7.html
+  10. https://writequit.org/blog/nsm-console/index.html
+  11. http://writequit.org/about.php
+  12. https://writequit.org/blog/index.html%3Fpage_id=7.html
+  13. http://writequit.tumblr.com/
+  14. http://twitter.com/thnetos
+  15. https://writequit.org/blog/index.html%3Fpage_id=7.html
+  16. form field = text entry field
+  17. form field = submit button
+  18. https://writequit.org/blog/index.html%3Fpage_id=7.html
+  19. https://writequit.org/blog/nsm-console/index.html
+  20. https://writequit.org/blog/2007/06/05/not-as-simple-perl-script-for-zfs-snapshot-auditing/comment-page-1/index.html#comment-1033
+  21. https://writequit.org/blog/2007/06/05/not-as-simple-perl-script-for-zfs-snapshot-auditing/comment-page-1/index.html#comment-1032
+  22. https://writequit.org/blog/2008/06/05/quick-javascript-de-obfuscation-with-python/comment-page-1/index.html#comment-930
+  23. https://writequit.org/blog/2010/03/15/how-i-develop-clojure-with-vim/comment-page-1/index.html#comment-929
+  24. http://www.dunnzilla.com/
+  25. https://writequit.org/blog/2010/02/01/annoyance-colored-diffs-in-perforce/comment-page-1/index.html#comment-921
+  26. http://twitter.com/statuses/user_timeline/9360032.rss
+  27. https://writequit.org/blog/index.html%3Fp=365.html
+  28. http://writequit.tumblr.com/rss
+  29. http://writequit.tumblr.com/
+  30. http://writequit.tumblr.com/post/47518634986
+  31. http://writequit.tumblr.com/post/47518336072
+  32. http://writequit.tumblr.com/post/25029726961
+  33. http://writequit.tumblr.com/post/23234364728
+  34. http://writequit.tumblr.com/post/2679728081
+  35. https://writequit.org/blog/2014/12/index.html
+  36. https://writequit.org/blog/2013/10/index.html
+  37. https://writequit.org/blog/2011/03/index.html
+  38. https://writequit.org/blog/2011/01/index.html
+  39. https://writequit.org/blog/2010/09/index.html
+  40. https://writequit.org/blog/2010/08/index.html
+  41. https://writequit.org/blog/2010/04/index.html
+  42. https://writequit.org/blog/2010/03/index.html
+  43. https://writequit.org/blog/2010/02/index.html
+  44. https://writequit.org/blog/2009/12/index.html
+  45. https://writequit.org/blog/2009/10/index.html
+  46. https://writequit.org/blog/2009/08/index.html
+  47. https://writequit.org/blog/2009/07/index.html
+  48. https://writequit.org/blog/2009/06/index.html
+  49. https://writequit.org/blog/2009/05/index.html
+  50. https://writequit.org/blog/2009/03/index.html
+  51. https://writequit.org/blog/2009/01/index.html
+  52. https://writequit.org/blog/2008/12/index.html
+  53. https://writequit.org/blog/2008/10/index.html
+  54. https://writequit.org/blog/2008/09/index.html
+  55. https://writequit.org/blog/2008/08/index.html
+  56. https://writequit.org/blog/2008/07/index.html
+  57. https://writequit.org/blog/2008/06/index.html
+  58. https://writequit.org/blog/2008/05/index.html
+  59. https://writequit.org/blog/2008/04/index.html
+  60. https://writequit.org/blog/2008/03/index.html
+  61. https://writequit.org/blog/2008/02/index.html
+  62. https://writequit.org/blog/2008/01/index.html
+  63. https://writequit.org/blog/2007/12/index.html
+  64. https://writequit.org/blog/2007/11/index.html
+  65. https://writequit.org/blog/2007/10/index.html
+  66. https://writequit.org/blog/2007/09/index.html
+  67. https://writequit.org/blog/2007/08/index.html
+  68. https://writequit.org/blog/2007/07/index.html
+  69. https://writequit.org/blog/2007/06/index.html
+  70. https://writequit.org/blog/2007/05/index.html
+  71. https://writequit.org/blog/index.html%3Fp=365.html
+  72. http://en.wikipedia.org/wiki/Natural_language_processing
+  73. http://github.com/dakrone/clojure-opennlp
+  74. http://opennlp.sourceforge.net/models/
+  75. http://bulba.sdsu.edu/jeanette/thesis/PennTags.html
+  76. http://github.com/dakrone/clojure-opennlp/blob/master/src/opennlp/tools/filters.clj
+  77. http://clojars.org/clojure-opennlp
+  78. http://github.com/dakrone/clojure-opennlp
+  79. https://writequit.org/blog/index.html%3Fp=351.html
+  80. http://github.com/dakrone/clojure-opennlp/tree/master/lib/
+  81. https://writequit.org/blog/tag/clojure/index.html
+  82. https://writequit.org/blog/tag/nlp/index.html
+  83. https://writequit.org/blog/tag/opennlp/index.html
+  84. https://writequit.org/blog/category/clojure/index.html
+  85. https://writequit.org/blog/category/nlp/index.html
+  86. https://writequit.org/blog/category/opennlp/index.html
+  87. http://disclojure.org/2010/03/08/today-in-the-intertweets-march-8th-ed/
+  88. https://writequit.org/blog/index.html%3Fp=365.html#comment-580
+  89. https://writequit.org/blog/index.html%3Fp=351.html
+  90. https://writequit.org/blog/index.html%3Fp=365.html#comment-582
+  91. http://www.duetsch.info/clojure-destillat-5.html
+  92. https://writequit.org/blog/index.html%3Fp=365.html#comment-607
+  93. http://opennlp.sourceforge.net/maven2
+  94. https://writequit.org/blog/index.html%3Fp=365.html#comment-629
+  95. http://wordpress.org/
+  96. http://www.mysql.com/
+  97. http://code.openark.org/blog/shlomi-noach
+  98. http://openark.org/
