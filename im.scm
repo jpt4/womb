@@ -6,7 +6,7 @@
 
 (define (im mk-id)
   (define id mk-id)
-  (define c-ls '()) ;'((tar0 dur0 res0) (tar1 dur1 res1) ...)
+  (define c-ls '()) ;'((tarn durn resn) (tar(n-1) dur(n-1) res(n-1)) ...)
   (define dlk #f) ;deadlock
   (define (get-id) id)
   (define (get-c-ls) c-ls)
@@ -81,20 +81,47 @@
 ;;sim - pass already created soc, p-ent as 0.75 = 75%
 (define (sim soc steps p-ent)
   (let ([size (soc 'get-size)])
-    (let loop ([t steps])
+    (let loop ([t steps] [log '((init))])
       (if (> t 0)
 	  (begin
-	    (if (< (random 1.0) p-ent) ;optionally gain new con
+	    (if (< (random 1.0) p-ent) ;potentially gain new con
 		(soc 'pass-msg (random size) 'enter (mk-con size steps)))
 	    (soc 'update) ;update all cons
-	    (displaynl `(t=,t soc=,(soc 'report))) ;display end-of-step status
-	    (loop (sub1 t)))
-	   (displaynl `(t=,t soc=,(soc 'report)))))))
+	    ;(displaynl `(t=,t soc=,(soc 'report))) ;display end-of-step status
+	    (loop (sub1 t) (append log (list `(t=,t soc=,(soc 'report))))))
+	    ;(displaynl `(t=,t soc=,(soc 'report)))
+	  (append log (list `(t=,t soc=,(soc 'report))))))))
 	  
 (define (mk-con size steps)
   (cons (random size) ;tar
 	(cons (random steps) ;dur
 	      (map (lambda (a) (random size)) (iota (random size)))))) ;res
+
+;;slv evaluation - ubiquitous, eternal deadlock potential
+(define (list-difference l1 l2)
+  (filter (lambda (a) (not (member a l2))) l1))
+(define (list-intersection l1 l2)
+  (filter (lambda (a) (member a l2)) l1))
+(define (log-entry step log) (list-ref log (add1 step)))
+(define (final-soc-state soc-log) (log-entry (- (length soc-log) 2) soc-log))
+(define (soc-in-log-entry log-entry) (cadddr log-entry))
+(define (im-in-log-entry log-entry im-id) 
+  (list-ref (soc-in-log-entry log-entry) im-id))
+(define (slv-con? con max-steps t-now pop)
+  (let ([tar (car con)] [dur (cadr con)] [res-ls (cddr
+(define (im-slv? im max-steps t-now pop) ;population size
+  (let ([c-ls (cadr im)])
+    (ormap (lambda (a) (and (> (cadr a) max-steps)
+			    (eq? (list-intersection (iota pop) (cddr a)) 
+				 (iota pop))))
+	   c-ls)))			    
+(define (slvs-in-log-entry log-entry max-steps pop) 
+  (letrec* ([t-now (cadr log-entry)]
+	    [im-ls (cadddr log-entry)]
+	    [im-ls-with-c-ls (filter (lambda (a) (not (null? (cadr a)))) im-ls)])
+    (filter (lambda (a) 
+	      (im-slv? a max-steps t-now pop))
+	    im-ls-with-c-ls)))
 
 ;;tests
 (define (displaynl d) (begin (display d) (newline)))
@@ -105,7 +132,7 @@
 
 #| Sample simulation test
 (define soc0 (soc 100))
-(sim soc0 100 0.5)
+(define soc-log (sim soc0 100 0.5))
 |#
 
 #;(define (run-tests) ;FIXME not displaying in correct order
