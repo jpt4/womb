@@ -95,20 +95,43 @@
 (define (mk-con size steps)
   (cons (random size) ;tar
 	(cons (random steps) ;dur
-	      (map (lambda (a) (random size)) (iota (random size)))))) ;res
+	      (random-w/o-replacement (random (add1 size)) (iota size))))) ;res
 
-;;slv evaluation - ubiquitous, eternal deadlock potential
-(define (list-difference l1 l2)
+;;slv evaluation - ubiquitous, continuous, eternal deadlock potential
+(define (list-difference l1 l2) ;in l1 and not in l2
   (filter (lambda (a) (not (member a l2))) l1))
 (define (list-intersection l1 l2)
   (filter (lambda (a) (member a l2)) l1))
+(define (random-w/o-replacement num ls)
+  (let loop ([n num] [l ls] [acc '()])
+    (if (> n 0)
+	(let ([piv (random (length l))])
+	  (loop (sub1 n) 
+		(append (list-head l piv) (list-tail l (add1 piv))) 
+		(cons (list-ref l piv) acc)))
+	acc)))
+
 (define (log-entry step log) (list-ref log (add1 step)))
 (define (final-soc-state soc-log) (log-entry (- (length soc-log) 2) soc-log))
 (define (soc-in-log-entry log-entry) (cadddr log-entry))
 (define (im-in-log-entry log-entry im-id) 
   (list-ref (soc-in-log-entry log-entry) im-id))
-(define (slv-con? con max-steps t-now pop)
-  (let ([tar (car con)] [dur (cadr con)] [res-ls (cddr
+
+(define (excl-slv-con? im-id con t-now pop) ;slv via one con
+  (let* ([tar (car con)] [dur (cadr con)] [res-ls (cddr con)]
+	 [non-res-ls (list-difference (iota pop) res-ls)])
+    (and 
+     ;(not (eq? tar im-id)) ;con cannot be with self
+     (> dur t-now) ;past the time horizon
+     (or (null? non-res-ls) ;entire pop
+	 (null? (list-difference `(,im-id) non-res-ls)) ;entire pop less self
+	 (null? (list-difference `(,tar) non-res-ls)) ;entire pop less tar
+	 (null? (list-difference `(,im-id ,tar) non-res-ls)) ;entire pop less self and tar
+	 ))))
+
+(define (collab-slv-con? im-id c-ls t-now pop) ;slv via con combination
+  'a)
+
 (define (im-slv? im max-steps t-now pop) ;population size
   (let ([c-ls (cadr im)])
     (ormap (lambda (a) (and (> (cadr a) max-steps)
@@ -133,6 +156,20 @@
 #| Sample simulation test
 (define soc0 (soc 100))
 (define soc-log (sim soc0 100 0.5))
+|#
+
+#|
+Notes
+APL in Scheme:
+>
+(map length (map (lambda (t) (filter (lambda (a) (eq? a t)) (sort < (map length (map (lambda (a) (mk-con 10 12)) (iota 10000))
+)))) (iota 13)))
+=>
+(0 0 960 886 894 900 914 940 869 956 893 933 914)
+
+Improvements, alterations
+Reverse t log to show time passed, not time remaining.
+Record types instead of lists.
 |#
 
 #;(define (run-tests) ;FIXME not displaying in correct order
