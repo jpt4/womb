@@ -98,16 +98,12 @@
 	      (random-w/o-replacement (random (add1 size)) (iota size))))) ;res
 
 ;;slv evaluation - ubiquitous, continuous, eternal deadlock potential
-
-;The following do not obey common, consistent, set, list, or multi-set
-;semantics. For example, list-difference deduplicates repeated values
-;from l1 or l2, while list-intersection does not. The unwritten 
-;(list-union) would be simply (append).
 (define (list-difference l1 l2) ;in l1 and not in l2
   (filter (lambda (a) (not (member a l2))) l1))
 (define (list-intersection l1 l2)
   (filter (lambda (a) (member a l2)) l1))
-
+(define (list-union l1 l2) ;prefer common elements from l1
+  (
 (define (random-w/o-replacement num ls)
   (let loop ([n num] [l ls] [acc '()])
     (if (> n 0)
@@ -132,24 +128,24 @@
      (or (null? non-res-ls) ;entire pop
 	 (null? (list-difference `(,im-id) non-res-ls)) ;entire pop less self
 	 (null? (list-difference `(,tar) non-res-ls)) ;entire pop less tar
-	 (null? (list-difference 
-		 `(,im-id ,tar) non-res-ls)) ;entire pop less self and tar
+	 (null? (list-difference `(,im-id ,tar) non-res-ls)) ;entire pop less self and tar
 	 ))))
 
 (define (combined-slv-con? im-id c-ls t-now pop) ;slv via con combination
-  (let* ([combined-res-ls (append (map (lambda (c) (if (> (cadr c) t-now) 
-						       (cddr c)
-						       '()))
-				       c-ls))]
-	 [non-res-ls (list-difference (iota pop) combined-res-ls)])
-    (or (null? non-res-ls) (null? (list-difference `(,im-id) non-res-ls)))
-    ))
+  (list- (map (lambda (c) (if (> (cadr c) t-now) 
+			       (cddr c)
+			       '()))
+	       c-ls))
+				
+  )
 
-(define (im-slv? im t-now pop) ;im printed in status-list form
-  (let ([im-id (car im)] [c-ls (cadr im)])
-    (or (ormap (lambda (con) (exclusive-slave-con? im-id con t-now pop)) c-ls)
-	(combined-slv-con? im-id c-ls t-now pop))))
 
+(define (im-slv? im max-steps t-now pop) ;population size
+  (let ([c-ls (cadr im)])
+    (ormap (lambda (a) (and (> (cadr a) max-steps)
+			    (eq? (list-intersection (iota pop) (cddr a)) 
+				 (iota pop))))
+	   c-ls)))			    
 (define (slvs-in-log-entry log-entry max-steps pop) 
   (letrec* ([t-now (cadr log-entry)]
 	    [im-ls (cadddr log-entry)]
