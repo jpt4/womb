@@ -1,0 +1,8 @@
+;;ndkm.scm
+;;jpt4
+;;UTC20160221
+;;n-dimensional k-means clustering
+
+(define (nd-euclidean p1 p2)
+	(expt (+  
+	 0.5)
