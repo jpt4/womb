@@ -1,0 +1,23 @@
+cp)http://tineye.com/search/39ebe6a4ae18a04f4822ce067bc8d424fa70495b/File Edit Options Buffers Tools Scheme Help
+;;zzstruct.scm                                                                                                                                                |;;; /home/jpt4/code/womb/zzstruct.scm:44:30: warning: possibly unbound variable `cell-pair?'
+;;jpt4                                                                                                                                                        |;;; compiled /home/jpt4/.cache/guile/ccache/2.2-LE-8-3.6/home/jpt4/code/womb/zzstruct.scm.go
+;;UTC20151028                                                                                                                                                 |scheme@(guile-user) [11]> (pair? '(1 2 3 4 5))
+|$26 = #t
+#|                                                                                                                                                            |scheme@(guile-user) [11]> (length '(1 2 3))
+|$27 = 3
+A ZZ structure (zzstruct) is an indexed collection of cells and their                                                                                         |scheme@(guile-user) [11]> ,a length
+neighbor list. A cell is a generic container for arbitrary content,                                                                                           |(guile): integer-length #<procedure integer-length (_)>
+formed by appending the tag "cell" to the list of a cell's index in                                                                                           |(guile): stack-length #<procedure stack-length (_)>
+the zztruct and the symbol which names the content referent,                                                                                                  |(guile): string-prefix-length #<procedure string-prefix-length (_ _ #:optional _ _ _ _)>
+e.g. (cell 0 c0). A neighbor list is a list of ordered pairs                                                                                                  |(guile): hostent:length #<procedure hostent:length (obj)>
+identifying the positive/upstream (left element), and                                                                                                         |(guile): string-suffix-length-ci  #<procedure string-suffix-length-ci (_ _ #:optional _ _ _ _)>
+negative/downstream (right element) neighbors of a cell along each                                                                                            |(guile): bitvector-length #<procedure bitvector-length (_)>
+dimensional axis. All cells are neighbors along the fundamental                                                                                               |(guile): length #<procedure length (_)>
+indexical axis, with positive and negative ordering implicit,                                                                                                 |(guile): string-prefix-length-ci  #<procedure string-prefix-length-ci (_ _ #:optional _ _ _ _)>
+corresponding to the numerical order of the cell indices. The neighbor                                                                                        |(guile): vector-length  #<procedure vector-length (_)>
+lists of all cells contain an ordered pair (even if the empty pair (0                                                                                         |(guile): array-length #<procedure array-length (_)>
+0)) for each axis inhabited by any cell, thus maintaining length                                                                                              |(guile): string-suffix-length #<procedure string-suffix-length (_ _ #:optional _ _ _ _)>
+parity between neighbor lists.                                                                                                                                |(guile): string-length  #<procedure string-length (_)>
+                                                                                                                                                              |scheme@(guile-user) [11]> ,a make-array
+																																																																															|#                                                                                                                                                            |(guile): make-array #<procedure make-array (_ . _)>
+																																																																															                                                                                                                                                              |scheme@(guile-user) [11]> (array-type (make-array 1 2))
