@@ -12,57 +12,46 @@
 (define (ascii? a) 
   (member a '(a b c d e f g h i j k l m n o p q r s t u v w x y z)))
 
+(define (ascii-exp? exp) (ascii? (car exp)))  
+
+(define (wc-exp? exp) (equal? (car exp) '@))
+
+(define (star-exp? exp) (equal? (car exp) '*))
+
 (define (ascii-match pat-exp str)
-  (if (equal? pat-exp (car str))
+  (if (equal? (car pat-exp) (car str))
       (cdr str)
       str))
 
-(define (wildcard-match str)
+(define (wildcard-match pat-exp str)
   (if (null? str)
       str
       (cdr str)))
 
 (define (star-match pat-exp str)
   (let loop ([pat (cdr pat-exp)]
-	     [s str]
-	     [stack '(*)])
-    
+	     [s str])
+    (let ([res (regex pat s)])
+      (if (equal? res s)
+	  s
+	  (loop pat res)))))
 
 ;;(a a a (* b))
 ;;str is always a list
-(define (regex pat-exp str)
-  (cond
-   [(null? pat-exp) str]
-   [(ascii? pat-exp) (ascii-match pat-exp str)]
-   [(equal? (car pat-exp) '@) (wildcard-match str)]
-   [(equal? (car pat-exp) '*) (star-match pat-exp str)]
-))
-
-
-  (cond
-   [(null? pat-exp) str]
-   [(equal? pat-exp str) 
-
-
-
-
-   
-   [(and (not (null? pat-exp)) (null? str)) #f]
-   [(and (pair? pat-exp) (equal? (car pat-exp) (car str)))
-    (regex (cdr pat-exp) (cdr str))]
-   [(and (pair? pat-exp) (equal? '@ (car pat-exp)))
-    (regex (cdr pat-exp) (cdr str))]
-   [(and (pair? (car pat-exp))
-	 (equal? '* (caar pat-exp)))
-    (let loop ([res (regex (cdar pat-exp) str)])
+(define (regex pat-exp str stack)
+  (if (null? stack)
       (cond
-       [(null? res) res]
-       [(and (not (equal? #f res)) (not (null? res)))
-	(loop (regex (cdar pat-exp) res))]
-       [(equal? res #f)
-	(regex (cdr pat-exp) str)]))]
-   [else str]
-   ))
+       [(null? pat-exp) str]
+       [(ascii-exp? pat-exp) (ascii-match pat-exp str)]
+       [(wc-exp? pat-exp) 
+	(regex (cdr pat-exp) (wildcard-match pat-exp str))]
+       [(star-exp? pat-exp) (star-match pat-exp str)];
+       [(star-exp? (car pat-exp)) 
+	(regex (cdr pat-exp) 
+	       (star-match (car pat-exp) str))])
+      
+       
+))
 
 (define (print p)
   (begin 
