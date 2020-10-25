@@ -9,11 +9,15 @@
       (= 1 (mod s 2)) (recur (+ 1 (* 3 s)) (concat ls (list s))))))
 
 (declare geo-range) (declare branchable?) (declare new-branch-from)
+(declare grow-ctree)
 
 (defn cbranch [start max] (geo-range start max 2))
 
-(defn ctree [depth]
-  (loop [tree (sorted-map 0 (cbranch 1 8))
+(defn ctree [depth] (grow-ctree depth (sorted-map 0 (cbranch 1 8))))
+
+;growable ctree
+(defn grow-ctree [depth tree-kernel]
+  (loop [tree tree-kernel
          branch-index 0]
     (let [tree-max (last (get tree 0))
           branch (get tree branch-index)
@@ -69,20 +73,28 @@
 
 (defn size-of-ctree [t] (reduce (fn [acc x] (+ (count (last x)) acc)) 0 t))
 
-(defn branch-seeds [t] 
-  (reduce (fn [ls x] (concat ls (list (first (last x))))) '() t))
+;TODO fix stack overflow at 35000 - fixed, convert reduce to loop-recur.
+(defn branch-seeds [tree] 
+  (loop [i (- (count tree) 1)
+         ls '()]
+    (cond
+      (= i 0) (cons (first (get tree i)) ls)
+      (> i 0) (recur (- i 1) (cons (first (get tree i)) ls)))))
 
 (defn is-prime? [n]
-  (and (not (= 0 n)) (not (= 1 n))
-       (not (reduce (fn [bc i] (or bc (= 0 (mod n (+ 1 i))))) 
-                    false 
-                    (range 1 (Math/floor (Math/sqrt n)))))))
+  (loop [bool true 
+         root (Math/floor (Math/sqrt n))]
+    (cond
+      (or (= 0 n) (= 1 n)) false
+      (== root 1) bool
+      (== 0 (mod n root)) false
+      (not (== 0 (mod n root))) (recur true (- root 1)))))
 
 ;t <- tree
 (defn prime-count [t]
   (count (filter is-prime? (branch-seeds t))))
 
-(defn prime-ratio [t]
+(defn tree-report [t]
   (let [tree-size (size-of-ctree t)
         seeds (branch-seeds t)
         seed-count (count seeds)
@@ -99,9 +111,23 @@
 
 (defn expected-prime-count [n] (/ n (Math/log n)))
 (defn expected-prime-ratio [n] (/ 1 (Math/log n)))
-(defn primes-less-than [n] (count (filter is-prime? (range 1 n))))
+(defn primes-less-than [n] 
+  (loop [acc 0 num n]
+    (cond
+      (<= num 1) acc
+      (is-prime? num) (recur (+ 1 acc) (- num 1))
+      'else (recur acc (- num 1)))))
+
+;max input ~25000 at present
 (defn ctree-to-numberline-prime-ratio [n]
   (* 1.0 (/ (prime-count (ctree n)) (primes-less-than n))))
+;tests
+;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 300)))
+;true
+;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 150)))
+;true
+
+
 
 (defn foo
   "I don't do a whole lot."
