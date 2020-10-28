@@ -13,7 +13,7 @@
 
 (defn cbranch [start max] (geo-range start max 2))
 
-(defn ctree [depth] (grow-ctree depth (sorted-map 0 (cbranch 1 8))))
+(defn ctree [depth] (grow-ctree depth (sorted-map 0 (cbranch 1 4))))
 
 ;growable ctree
 (defn grow-ctree [depth tree-kernel]
@@ -73,7 +73,6 @@
 
 (defn size-of-ctree [t] (reduce (fn [acc x] (+ (count (last x)) acc)) 0 t))
 
-;TODO fix stack overflow at 35000 - fixed, convert reduce to loop-recur.
 (defn branch-seeds [tree] 
   (loop [i (- (count tree) 1)
          ls '()]
@@ -92,7 +91,7 @@
 
 ;t <- tree
 (defn prime-count [t]
-  (count (filter is-prime? (branch-seeds t))))
+  (+ 1 (count (filter is-prime? (branch-seeds t)))))
 
 (defn tree-report [t]
   (let [tree-size (size-of-ctree t)
@@ -111,16 +110,32 @@
 
 (defn expected-prime-count [n] (/ n (Math/log n)))
 (defn expected-prime-ratio [n] (/ 1 (Math/log n)))
-(defn primes-less-than [n] 
+(defn prime-counting-fn [n] 
   (loop [acc 0 num n]
     (cond
       (<= num 1) acc
       (is-prime? num) (recur (+ 1 acc) (- num 1))
       'else (recur acc (- num 1)))))
 
-;max input ~25000 at present
-(defn ctree-to-numberline-prime-ratio [n]
-  (* 1.0 (/ (prime-count (ctree n)) (primes-less-than n))))
+;ctree of depth(tree), numberline [1, num]
+(defn ctree-to-numberline-prime-ratio [tree num]
+  (/ (* 1.0 (prime-count tree)) (prime-counting-fn num)))
+
+(defn cumulative-comparison [max-depth]
+  (loop [depth 4
+         tree (ctree depth)
+         out (sorted-map depth (ctree-to-numberline-prime-ratio tree depth))]
+    (cond
+      (= depth max-depth) out
+      (< depth max-depth)
+      (let [next-depth (+ 1 depth)
+            next-tree (grow-ctree next-depth tree)
+            next-out 
+            (assoc out 
+                   next-depth
+                   (ctree-to-numberline-prime-ratio next-tree next-depth))]
+        (recur next-depth next-tree next-out)))))
+   
 ;tests
 ;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 300)))
 ;true
