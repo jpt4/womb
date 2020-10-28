@@ -1,22 +1,29 @@
 (ns collatz.core)
 
-(defn cseq [seed]
-  (loop [s seed
-         ls '()]
-    (cond
-      (= s 1) (concat ls '(1))
-      (= 0 (mod s 2)) (recur (/ s 2) (concat ls (list s)))
-      (= 1 (mod s 2)) (recur (+ 1 (* 3 s)) (concat ls (list s))))))
+;TODO: memoized function macro, defm
+
+(def cseqer
+  (memoize  
+   (fn [seed]
+     (loop [s seed
+            ls '()]
+       (cond
+         (= s 1) (concat ls '(1))
+         (= 0 (mod s 2)) (recur (/ s 2) (concat ls (list s)))
+         (= 1 (mod s 2)) (recur (+ 1 (* 3 s)) (concat ls (list s))))))))
 
 (declare geo-range) (declare branchable?) (declare new-branch-from)
-(declare grow-ctree)
+(declare grow-ctree) (declare grow-ctree-aux)
 
-(defn cbranch [start max] (geo-range start max 2))
+(defn cbranch-aux [start max] (geo-range start max 2))
+(def cbranch (memoize cbranch-aux))
 
-(defn ctree [depth] (grow-ctree depth (sorted-map 0 (cbranch 1 4))))
+(defn ctree-aux [depth] (grow-ctree depth (sorted-map 0 (cbranch 1 4))))
+(def ctree (memoize ctree-aux))
 
 ;growable ctree
-(defn grow-ctree [depth tree-kernel]
+(def grow-ctree (memoize grow-ctree-aux))
+(defn grow-ctree-aux [depth tree-kernel]
   (loop [tree tree-kernel
          branch-index 0]
     (let [tree-max (last (get tree 0))
@@ -80,7 +87,7 @@
       (= i 0) (cons (first (get tree i)) ls)
       (> i 0) (recur (- i 1) (cons (first (get tree i)) ls)))))
 
-(defn is-prime? [n]
+(defn is-prime?-aux [n]
   (loop [bool true 
          root (Math/floor (Math/sqrt n))]
     (cond
@@ -88,6 +95,8 @@
       (== root 1) bool
       (== 0 (mod n root)) false
       (not (== 0 (mod n root))) (recur true (- root 1)))))
+
+(def is-prime? (memoize is-prime?-aux))
 
 ;t <- tree
 (defn prime-count [t]
@@ -117,6 +126,8 @@
       (is-prime? num) (recur (+ 1 acc) (- num 1))
       'else (recur acc (- num 1)))))
 
+;(defn progressive-prime-counting [n
+
 ;ctree of depth(tree), numberline [1, num]
 (defn ctree-to-numberline-prime-ratio [tree num]
   (/ (* 1.0 (prime-count tree)) (prime-counting-fn num)))
@@ -142,7 +153,13 @@
 ;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 150)))
 ;true
 
-
+;memoization benefits
+;collatz.core> (time (count (ctree 2000)))
+;"Elapsed time: 16.348727 msecs"
+;88
+;collatz.core> (time (count (ctree 2000)))
+;"Elapsed time: 0.216717 msecs"
+;88
 
 (defn foo
   "I don't do a whole lot."
