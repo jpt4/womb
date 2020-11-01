@@ -144,6 +144,7 @@
         (recur next-depth next-tree next-out)))))
 
 ;;graph translation
+;;TODO - create collatz structures as visualizable graphs from the start
 (defn cseq->graph [cseq]
   (loop [g (uber/digraph nil)
          c cseq]
@@ -172,6 +173,19 @@
            [(first b) (+ 1 (* 3 (first b)))])
           (cseq->graph (reverse b)))
          (+ 1 i))))))
+
+;;visualization process
+;create ctree
+;(def c1 (ctree 100))
+;create graph
+;(def g1 (ctree->graph c1))
+;visualize graph
+;(uber/viz-graph g1)
+;alternatively
+;(uber/viz-graph (ctree->graph (ctree 100)))
+;see collatz/gdefault.png for an example, generated using
+;(uber/viz-graph (ctree->graph (ctree 100)))
+;{:save {:filename "gdefault.png" :format :png}})
 
 ;tests
 ;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 300)))

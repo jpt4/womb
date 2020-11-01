@@ -1,0 +1,8 @@
+size of ctree vs prime ratio bargraph
+
+create collatz structures as visualizable graphs from the start
+
+webpage that 
+- accepts a cseq seed, and returns its visualization
+- accepts a depth of ctree, and returns its visualization
+- interactively grows the ctree vs prime ratio bargraph
