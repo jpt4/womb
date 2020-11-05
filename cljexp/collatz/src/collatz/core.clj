@@ -1,5 +1,7 @@
 (ns collatz.core
-  (:require [ubergraph.core :as uber]))
+  (:require [ubergraph.core :as ub]
+            [incanter.core :as incc]
+            [incanter.charts :as charts]))
 
 ;define memoized function 
 (defmacro defn-memo [name [& params*] body]
@@ -146,29 +148,29 @@
 ;;graph translation
 ;;TODO - create collatz structures as visualizable graphs from the start
 (defn cseq->graph [cseq]
-  (loop [g (uber/digraph nil)
+  (loop [g (ub/digraph nil)
          c cseq]
     (cond
-      (empty? c) (uber/remove-nodes g nil)
+      (empty? c) (ub/remove-nodes g nil)
       (not (empty? c)) 
-      (recur (uber/add-directed-edges g [(first c) (first (next c))])
+      (recur (ub/add-directed-edges g [(first c) (first (next c))])
              (next c)))))
 
 (defn combine-graphs [g1 g2]
-  (uber/add-edges* 
+  (ub/add-edges* 
    g1
-   (map (partial uber/edge-with-attrs g2) (uber/edges g2))))
+   (map (partial ub/edge-with-attrs g2) (ub/edges g2))))
 
 (defn ctree->graph [ctree]
-  (loop [g (uber/digraph nil)
+  (loop [g (ub/digraph nil)
          i 0]
     (cond
-      (= i (count ctree)) (uber/remove-nodes g nil)
+      (= i (count ctree)) (ub/remove-nodes g nil)
       (< i (count ctree))
       (let [b (get ctree i)]
         (recur 
          (combine-graphs 
-          (uber/add-directed-edges 
+          (ub/add-directed-edges 
            g 
            [(first b) (+ 1 (* 3 (first b)))])
           (cseq->graph (reverse b)))
@@ -180,12 +182,22 @@
 ;create graph
 ;(def g1 (ctree->graph c1))
 ;visualize graph
-;(uber/viz-graph g1)
+;(ub/viz-graph g1)
 ;alternatively
-;(uber/viz-graph (ctree->graph (ctree 100)))
+;(ub/viz-graph (ctree->graph (ctree 100)))
 ;see collatz/gdefault.png for an example, generated using
-;(uber/viz-graph (ctree->graph (ctree 100)))
+;(ub/viz-graph (ctree->graph (ctree 100)))
 ;{:save {:filename "gdefault.png" :format :png}})
+
+;;data analysis
+(defn cumulative-plot [cc]
+                (let [x (map first cc)
+                      y (map second cc)]
+                  (charts/scatter-plot x y)))
+
+;(def cctest (cumulative-plot (cumulative-comparison 10000)))
+;(incc/view cc)
+;(incc/save cctest "cctest.png")
 
 ;tests
 ;collatz.core> (= (grow-ctree 300 (ctree 150)) (grow-ctree 300 (ctree 300)))
