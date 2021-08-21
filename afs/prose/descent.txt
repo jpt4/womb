@@ -2,3 +2,17 @@
 
 On the Descent of Rigor
 
+"Rigor" is the independence of a reason from a reasoner. A rigorous
+argument is mobile from its source, and preserves its force of
+justification when separated from the conditions of its
+construction. Defined as a process rather than a property, rigor is
+identified with externalization, such that arguments which provide
+high confidence in the conclusions they justify retain their
+justificatory prowess despite their agent of articulation - in
+extremum, an ideally rigorous argument would compel a conclusion
+irrespective of circumstance, with no appeal to any other mechanism
+than the argument itself. This ouroboric but yet meaningful argument
+would thus be an example of autarkic reason [0].
+
+[0] The theological analogues being clear, but ripe for later
+elaboration.
