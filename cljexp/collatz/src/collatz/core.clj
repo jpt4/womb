@@ -1,7 +1,8 @@
 (ns collatz.core
   (:require [ubergraph.core :as ub]
             [incanter.core :as incc]
-            [incanter.charts :as charts]))
+            [incanter.charts :as charts]
+            ))
 
 ;define memoized function 
 (defmacro defn-memo [name [& params*] body]
