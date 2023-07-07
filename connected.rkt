@@ -1,3 +1,5 @@
+#lang racket
+
 (define (cartesian-product leftls rightls)
   (foldr (lambda (left acc) 
 	   (append (map (lambda (right)
@@ -37,7 +39,25 @@
        ls)
       "err, k greater than size of list"))
 
+
+(define (merge-lists l1 l2) (remove-duplicates (append l1 l2)))
+
+(define (directed-next-layer graph root)
+
+		    (let ([v (first graph)] [e (second graph)])
+		      (map second (filter (lambda (a) (equal? (first a) root))
+					  e))))
+
 (define (spanning-tree graph)
-  (let ([v0 (car (list-ref graph (random (length graph))))])
-    (let loop ([v v0] [g graph]
+  (let loop ([g graph] [acc '()])
+    (let ([v (first g)] [e (second g)] [root (car v)] [g' (next-layer g root)])
+      (cond
+       [(empty? g) #t]
+       
+    
+    
+
+;(define (spanning-tree graph)
+;  (let ([v0 (car (list-ref graph (random (length graph))))])
+ ;   (let loop ([v v0] [g graph])))
 	       

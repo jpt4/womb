@@ -8,5 +8,6 @@
                  [incanter "1.9.3"]
                  [ring "1.7.0"]
                  [hiccup "2.0.0-alpha2"]
-                 [compojure "1.6.2"]]
+                 [compojure "1.6.2"]
+                 [org.clojure/core.logic "1.0.1"]]
   :repl-options {:init-ns collatz.core})
